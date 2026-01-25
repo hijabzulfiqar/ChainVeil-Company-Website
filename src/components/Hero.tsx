@@ -55,8 +55,8 @@ export default function Hero() {
       {/* Dashboard */}
       <div className="relative max-w-5xl mt-8 sm:mt-14 mx-auto px-4 sm:px-6" style={{ perspective: "1000px" }}>
         <div className="pointer-events-none relative mb-4 hidden sm:block">
-          <div className="absolute -top-10 left-1/2 h-16 w-full max-w-4xl -translate-x-1/2 rounded-full bg-gradient-to-r from-transparent via-emerald-500/60 to-transparent blur-xl" />
-          <div className="absolute -top-4 left-1/2 h-8 w-3/4 -translate-x-1/2 rounded-full bg-gradient-to-r from-transparent via-green-400/40 to-transparent blur-lg" />
+          <div className="absolute -top-10 left-1/2 h-16 w-full max-w-4xl -translate-x-1/2 rounded-full blur-xl" style={{ background: "linear-gradient(to right, transparent, rgba(129, 214, 88, 0.6), transparent)" }} />
+          <div className="absolute -top-4 left-1/2 h-8 w-3/4 -translate-x-1/2 rounded-full blur-lg" style={{ background: "linear-gradient(to right, transparent, rgba(129, 214, 88, 0.4), transparent)" }} />
         </div>
 
         <div className="relative transition-transform duration-800 ease-out">
@@ -86,7 +86,7 @@ export default function Hero() {
               <aside className="hidden lg:block border-r border-white/10 p-3">
                 <div className="flex items-center gap-2 px-2">
                   <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-neutral-800 ring-1 ring-white/10 overflow-hidden">
-                    <div className="w-6 h-6 bg-gradient-to-br from-emerald-500 to-green-400 rounded" />
+                    <div className="w-6 h-6 rounded" style={{ background: "linear-gradient(to bottom right, #81D658, #6BC248)" }} />
                   </span>
                   <div>
                     <div className="text-xs font-medium">Alex Carter</div>
@@ -124,7 +124,7 @@ export default function Hero() {
                   <div className="mb-3 sm:mb-4">
                     <div className="flex items-center justify-between mb-2 sm:mb-3">
                       <h2 className="text-sm sm:text-base font-semibold tracking-tight">Dashboard Overview</h2>
-                      <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/10 px-1.5 sm:px-2 py-0.5 text-[10px] sm:text-xs font-medium text-emerald-300 ring-1 ring-emerald-500/20">
+                      <span className="inline-flex items-center gap-1 rounded-full px-1.5 sm:px-2 py-0.5 text-[10px] sm:text-xs font-medium ring-1" style={{ backgroundColor: "rgba(129, 214, 88, 0.1)", color: "#81D658", borderColor: "rgba(129, 214, 88, 0.2)" }}>
                         <TrendingUp className="h-2.5 w-2.5 sm:h-3 sm:w-3" />
                         +12.4%
                       </span>
@@ -141,7 +141,7 @@ export default function Hero() {
                         <div key={metric.label} className="rounded-lg border border-white/10 bg-neutral-900/60 p-2 sm:p-3">
                           <div className="text-[10px] sm:text-xs text-neutral-400">{metric.label}</div>
                           <div className="text-sm sm:text-lg font-semibold">{metric.value}</div>
-                          <div className={`text-[10px] sm:text-xs ${metric.positive ? "text-emerald-400" : "text-rose-400"}`}>
+                          <div className="text-[10px] sm:text-xs" style={{ color: metric.positive ? "#81D658" : "#f87171" }}>
                             {metric.change}
                           </div>
                         </div>
@@ -162,12 +162,8 @@ export default function Hero() {
                         {[40, 60, 80, 45, 75, 90, 70].map((height, i) => (
                           <div
                             key={i}
-                            className={`w-1.5 sm:w-2 rounded-t transition-all duration-1000 ${
-                              i >= 5
-                                ? "bg-gradient-to-t from-green-500 to-green-400"
-                                : "bg-gradient-to-t from-emerald-500 to-emerald-400"
-                            }`}
-                            style={{ height: `${height}%` }}
+                            className="w-1.5 sm:w-2 rounded-t transition-all duration-1000"
+                            style={{ height: `${height}%`, background: i >= 5 ? "linear-gradient(to top, #6BC248, #81D658)" : "linear-gradient(to top, #81D658, #9AE076)" }}
                           />
                         ))}
                       </div>
@@ -183,8 +179,8 @@ export default function Hero() {
                       <div className="h-16 sm:h-24 flex items-center justify-center">
                         <div className="relative">
                           <div
-                            className="w-10 h-10 sm:w-16 sm:h-16 rounded-full border-4 sm:border-8 border-emerald-500/30 border-t-emerald-500 border-r-green-500 border-b-teal-500"
-                            style={{ transform: "rotate(240deg)" }}
+                            className="w-10 h-10 sm:w-16 sm:h-16 rounded-full"
+                            style={{ transform: "rotate(240deg)", border: "4px solid rgba(129, 214, 88, 0.3)", borderTopColor: "#81D658", borderRightColor: "#6BC248", borderBottomColor: "#9AE076" }}
                           />
                           <div className="absolute inset-0 flex items-center justify-center text-[10px] sm:text-xs font-semibold">67%</div>
                         </div>
@@ -210,14 +206,14 @@ export default function Hero() {
                         </thead>
                         <tbody className="divide-y divide-white/10 text-[10px] sm:text-xs">
                           {[
-                            { event: "signup_completed", color: "bg-emerald-400", user: "user_1204", count: "1.2K", time: "2m ago" },
-                            { event: "page_view", color: "bg-green-400", user: "user_8847", count: "892", time: "5m ago" },
-                            { event: "purchase", color: "bg-teal-400", user: "user_5521", count: "456", time: "8m ago" },
+                            { event: "signup_completed", color: "#81D658", user: "user_1204", count: "1.2K", time: "2m ago" },
+                            { event: "page_view", color: "#6BC248", user: "user_8847", count: "892", time: "5m ago" },
+                            { event: "purchase", color: "#9AE076", user: "user_5521", count: "456", time: "8m ago" },
                           ].map((row) => (
                             <tr key={row.event} className="hover:bg-white/5">
                               <td className="px-3 sm:px-4 py-1.5 sm:py-2">
                                 <div className="flex items-center gap-1.5 sm:gap-2">
-                                  <span className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full ${row.color}`} />
+                                  <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full" style={{ backgroundColor: row.color }} />
                                   <span className="truncate max-w-[80px] sm:max-w-none">{row.event}</span>
                                 </div>
                               </td>

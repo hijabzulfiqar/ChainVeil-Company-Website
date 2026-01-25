@@ -51,7 +51,7 @@ export default function IndustryLeaders() {
                         </p>
                         <div className="pt-3 border-t border-neutral-200 flex items-center justify-between">
                           <div className="flex items-center gap-2">
-                            <div className="h-6 w-6 rounded-full bg-gradient-to-br from-emerald-500 to-green-500" />
+                            <div className="h-6 w-6 rounded-full bg-gradient-to-br from-brand to-brand-dark" />
                             <div>
                               <div className="text-xs font-medium text-neutral-900">Jordan Avery</div>
                               <div className="text-xs text-neutral-500">Head of Product</div>
@@ -139,7 +139,7 @@ export default function IndustryLeaders() {
                         </p>
                         <div className="pt-3 border-t border-neutral-200 flex items-center justify-between">
                           <div className="flex items-center gap-2">
-                            <div className="h-6 w-6 rounded-full bg-gradient-to-br from-emerald-500 to-teal-500" />
+                            <div className="h-6 w-6 rounded-full bg-gradient-to-br from-brand to-brand-dark" />
                             <div>
                               <div className="text-xs font-medium text-neutral-900">Marcus Rodriguez</div>
                               <div className="text-xs text-neutral-500">Portfolio Manager</div>

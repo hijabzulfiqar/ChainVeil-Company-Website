@@ -28,7 +28,7 @@ export default function MarketMoves() {
               Track live price changes, market shifts, and key events as they happen. Never miss an opportunity or a critical update again.
             </p>
             <div className="mt-5 sm:mt-6 flex justify-center lg:justify-start">
-              <a href="#" className="flex justify-center gap-2 items-center font-semibold relative z-10 overflow-hidden group text-sm sm:text-lg text-neutral-900 bg-gray-50 max-w-fit border-gray-50 border-2 rounded-full py-1.5 sm:py-2 px-3 sm:px-4 shadow-xl backdrop-blur-md hover:bg-emerald-500 hover:text-white hover:border-emerald-500 transition-all duration-300">
+              <a href="#" className="flex justify-center gap-2 items-center font-semibold relative z-10 overflow-hidden group text-sm sm:text-lg text-neutral-900 bg-gray-50 max-w-fit border-gray-50 border-2 rounded-full py-1.5 sm:py-2 px-3 sm:px-4 shadow-xl backdrop-blur-md hover:bg-brand hover:text-white hover:border-brand transition-all duration-300">
                 Start investing
                 <ArrowUpRight className="h-3.5 w-3.5 sm:h-4 sm:w-4 group-hover:rotate-45 transition-transform" />
               </a>
@@ -40,7 +40,7 @@ export default function MarketMoves() {
             <div className="flex items-center justify-between mb-3 sm:mb-4">
               <div className="text-xs sm:text-sm font-medium text-neutral-300">Watchlist</div>
               <div className="inline-flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs text-neutral-400">
-                <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-emerald-400 animate-pulse" /> Live
+                <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-brand animate-pulse" /> Live
               </div>
             </div>
 
@@ -73,11 +73,11 @@ export default function MarketMoves() {
                       </div>
                       <div className="flex items-center gap-1.5 sm:gap-3">
                         <svg width="48" height="18" viewBox="0 0 72 22" className="opacity-90 hidden sm:block">
-                          <path d={coin.up ? "M1 18 L9 12 L17 14 L25 10 L33 9 L41 11 L49 8 L57 9 L65 7" : "M1 8 L10 11 L18 10 L26 12 L34 9 L42 11 L50 8 L58 10 L66 6"} stroke={coin.up ? "rgb(16,185,129)" : "rgb(244,63,94)"} strokeWidth="2" fill="none" />
+                          <path d={coin.up ? "M1 18 L9 12 L17 14 L25 10 L33 9 L41 11 L49 8 L57 9 L65 7" : "M1 8 L10 11 L18 10 L26 12 L34 9 L42 11 L50 8 L58 10 L66 6"} stroke={coin.up ? "#81D658" : "rgb(244,63,94)"} strokeWidth="2" fill="none" />
                         </svg>
                         <div className="text-right">
                           <div className="text-[10px] sm:text-sm text-neutral-300">{coin.price}</div>
-                          <div className={`text-[9px] sm:text-xs ${coin.up ? "text-emerald-300" : "text-rose-400"}`}>{coin.change}</div>
+                          <div className={`text-[9px] sm:text-xs ${coin.up ? "text-brand" : "text-rose-400"}`}>{coin.change}</div>
                         </div>
                       </div>
                     </div>
@@ -113,11 +113,11 @@ export default function MarketMoves() {
                       </div>
                       <div className="flex items-center gap-1.5 sm:gap-3">
                         <svg width="48" height="18" viewBox="0 0 72 22" className="opacity-90 hidden sm:block">
-                          <path d={coin.up ? "M1 17 L9 14 L16 12 L24 15 L31 10 L39 12 L47 9 L55 11 L63 7 L71 9" : "M1 6 L10 9 L18 8 L26 10 L34 9 L42 11 L50 8 L58 9 L66 7"} stroke={coin.up ? "rgb(16,185,129)" : "rgb(244,63,94)"} strokeWidth="2" fill="none" />
+                          <path d={coin.up ? "M1 17 L9 14 L16 12 L24 15 L31 10 L39 12 L47 9 L55 11 L63 7 L71 9" : "M1 6 L10 9 L18 8 L26 10 L34 9 L42 11 L50 8 L58 9 L66 7"} stroke={coin.up ? "#81D658" : "rgb(244,63,94)"} strokeWidth="2" fill="none" />
                         </svg>
                         <div className="text-right">
                           <div className="text-[10px] sm:text-sm text-neutral-300">{coin.price}</div>
-                          <div className={`text-[9px] sm:text-xs ${coin.up ? "text-emerald-300" : "text-rose-400"}`}>{coin.change}</div>
+                          <div className={`text-[9px] sm:text-xs ${coin.up ? "text-brand" : "text-rose-400"}`}>{coin.change}</div>
                         </div>
                       </div>
                     </div>

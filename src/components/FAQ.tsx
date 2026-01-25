@@ -5,7 +5,7 @@ export default function FAQ() {
     <section className="relative">
       {/* Header accent line */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="hidden sm:block absolute top-8 left-8 right-8 h-px bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent"></div>
+        <div className="hidden sm:block absolute top-8 left-8 right-8 h-px bg-gradient-to-r from-transparent via-brand/30 to-transparent"></div>
       </div>
 
       <div className="max-w-4xl mx-auto pt-12 sm:pt-24 px-4 sm:px-6 pb-10 sm:pb-16">
@@ -43,16 +43,17 @@ export default function FAQ() {
               key={index}
               className={`faq-item rounded-2xl sm:rounded-3xl border border-white/10 ring-1 ring-white/5 overflow-hidden transition-all duration-300 ${
                 item.defaultOpen
-                  ? "bg-gradient-to-b from-emerald-500/15 via-emerald-500/10 to-green-500/0"
+                  ? "faq-open"
                   : "bg-neutral-900/40 hover:bg-white/5"
               }`}
+              style={item.defaultOpen ? { background: "linear-gradient(to bottom, rgba(129, 214, 88, 0.15), rgba(129, 214, 88, 0.1), transparent)" } : {}}
               data-open={item.defaultOpen ? "true" : "false"}
             >
               <button
                 type="button"
                 className="w-full text-left px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 flex items-start justify-between gap-3 sm:gap-6 hover:bg-white/5 transition-colors"
                 onClick={(e) => {
-                  const card = e.currentTarget.parentElement;
+                  const card = e.currentTarget.parentElement as HTMLElement;
                   const panel = card?.querySelector('.faq-panel') as HTMLElement;
                   const isOpen = card?.getAttribute('data-open') === 'true';
                   const willOpen = !isOpen;
@@ -66,8 +67,8 @@ export default function FAQ() {
                         otherPanel.style.maxHeight = '0';
                         otherPanel.style.opacity = '0';
                       }
+                      (otherCard as HTMLElement).style.background = '';
                       otherCard.classList.add('bg-neutral-900/40');
-                      otherCard.classList.remove('bg-gradient-to-b', 'from-emerald-500/15', 'via-emerald-500/10', 'to-green-500/0');
                     }
                   });
 
@@ -77,13 +78,13 @@ export default function FAQ() {
                     if (willOpen) {
                       panel.style.maxHeight = panel.scrollHeight + 'px';
                       panel.style.opacity = '1';
-                      card?.classList.remove('bg-neutral-900/40');
-                      card?.classList.add('bg-gradient-to-b', 'from-emerald-500/15', 'via-emerald-500/10', 'to-green-500/0');
+                      card.classList.remove('bg-neutral-900/40');
+                      card.style.background = 'linear-gradient(to bottom, rgba(129, 214, 88, 0.15), rgba(129, 214, 88, 0.1), transparent)';
                     } else {
                       panel.style.maxHeight = '0';
                       panel.style.opacity = '0';
-                      card?.classList.add('bg-neutral-900/40');
-                      card?.classList.remove('bg-gradient-to-b', 'from-emerald-500/15', 'via-emerald-500/10', 'to-green-500/0');
+                      card.classList.add('bg-neutral-900/40');
+                      card.style.background = '';
                     }
                   }
                 }}

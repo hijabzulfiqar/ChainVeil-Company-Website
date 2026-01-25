@@ -11,8 +11,8 @@ export default function CTA() {
           className="relative overflow-hidden bg-neutral-50/0 border-white/10 border ring-white/5 ring-1 rounded-2xl sm:rounded-3xl"
           style={{
             background: `
-              radial-gradient(600px 240px at 25% 10%, rgba(16,185,129,0.12), transparent 65%),
-              radial-gradient(700px 280px at 90% 100%, rgba(5,150,105,0.12), transparent 70%)
+              radial-gradient(600px 240px at 25% 10%, rgba(129, 214, 88, 0.12), transparent 65%),
+              radial-gradient(700px 280px at 90% 100%, rgba(107, 194, 72, 0.12), transparent 70%)
             `,
           }}
         >
@@ -69,8 +69,8 @@ export default function CTA() {
 
           {/* Bottom neon underline + glow */}
           <div className="pointer-events-none absolute inset-x-6 sm:inset-x-10 bottom-0">
-            <div className="h-px w-full rounded-full bg-gradient-to-r from-transparent via-emerald-500 to-transparent"></div>
-            <div className="absolute left-1/2 -translate-x-1/2 bottom-0 h-10 sm:h-12 w-[88%] sm:w-[82%] rounded-full bg-emerald-500/25 blur-2xl"></div>
+            <div className="h-px w-full rounded-full bg-gradient-to-r from-transparent via-brand to-transparent"></div>
+            <div className="absolute left-1/2 -translate-x-1/2 bottom-0 h-10 sm:h-12 w-[88%] sm:w-[82%] rounded-full bg-brand/25 blur-2xl"></div>
           </div>
         </div>
       </div>

@@ -27,14 +27,14 @@ export default function FeaturesCards() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
           {/* Card 1: Enhanced Payments */}
-          <div className="group relative overflow-hidden ring-1 ring-white/5 transition-all duration-500 hover:border-white-500/30 hover:ring-emerald-500/20 bg-neutral-50/0 border-white/10 border rounded-xl sm:rounded-2xl">
+          <div className="group relative overflow-hidden ring-1 ring-white/5 transition-all duration-500 hover:border-white-500/30 bg-neutral-50/0 border-white/10 border rounded-xl sm:rounded-2xl" style={{ ["--tw-ring-color" as string]: "rgba(129, 214, 88, 0.2)" }}>
             <div className="absolute -bottom-12 -right-12 transition-all duration-700 group-hover:scale-110 bg-gradient-to-tr from-white-500/25 via-white-500/15 to-transparent w-32 sm:w-48 h-32 sm:h-48 rounded-full blur-3xl" />
-            <div className="absolute -top-6 -left-6 bg-gradient-to-br from-emerald-500/20 via-green-500/10 to-transparent w-24 sm:w-36 h-24 sm:h-36 rounded-full blur-2xl" />
+            <div className="absolute -top-6 -left-6 w-24 sm:w-36 h-24 sm:h-36 rounded-full blur-2xl" style={{ background: "linear-gradient(to bottom right, rgba(129, 214, 88, 0.2), rgba(129, 214, 88, 0.1), transparent)" }} />
 
             <div className="p-4 sm:p-6">
               <div className="flex mb-4 items-start justify-between">
                 <span className="inline-flex items-center gap-1.5 text-xs font-medium text-white bg-white/0 ring-white/20 ring-1 rounded-lg py-1 px-2.5">
-                  <div className="h-1.5 w-1.5 bg-green-400 rounded-full" />
+                  <div className="h-1.5 w-1.5 rounded-full" style={{ backgroundColor: "#81D658" }} />
                   Active
                 </span>
               </div>
@@ -48,14 +48,14 @@ export default function FeaturesCards() {
 
               <div className="flex items-center justify-between text-xs text-neutral-400 mb-3 sm:mb-4">
                 <span className="font-medium">Recent History</span>
-                <a className="inline-flex items-center gap-1 text-neutral-300 hover:text-emerald-300 transition-colors group/link" href="#">
+                <a className="inline-flex items-center gap-1 text-neutral-300 transition-colors group/link hover:[color:#81D658]" href="#">
                   <span>Show all</span>
                   <ArrowUpRight className="h-3 w-3 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
                 </a>
               </div>
 
               <div className="mb-3 sm:mb-4">
-                <div className="flex items-center gap-2 sm:gap-2.5 rounded-lg sm:rounded-xl border border-white/10 bg-white/5 px-3 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm text-neutral-300 transition-all duration-300 hover:bg-white/10 focus-within:border-emerald-500/50 focus-within:ring-1 focus-within:ring-emerald-500/20">
+                <div className="flex items-center gap-2 sm:gap-2.5 rounded-lg sm:rounded-xl border border-white/10 bg-white/5 px-3 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm text-neutral-300 transition-all duration-300 hover:bg-white/10 focus-within:border-[#81D658]/50 focus-within:ring-1 focus-within:ring-[#81D658]/20">
                   <Search className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-neutral-400" />
                   <span className="flex-1">Search payment requests</span>
                   <span className="text-[10px] sm:text-xs text-neutral-500 hidden sm:inline">⌘K</span>
@@ -70,10 +70,10 @@ export default function FeaturesCards() {
                   <div key={item.name} className="flex items-center justify-between p-2.5 sm:p-3 rounded-lg sm:rounded-xl bg-white/5 border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-white/20">
                     <div className="flex items-center gap-2 sm:gap-3">
                       <div className="relative">
-                        <span className="inline-flex items-center justify-center bg-gradient-to-br from-emerald-500/20 to-green-500/20 w-7 h-7 sm:w-8 sm:h-8 ring-white/10 ring-1 rounded-full">
-                          <Wallet className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-emerald-400" />
+                        <span className="inline-flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 ring-white/10 ring-1 rounded-full" style={{ background: "linear-gradient(to bottom right, rgba(129, 214, 88, 0.2), rgba(107, 194, 72, 0.2))" }}>
+                          <Wallet className="h-3.5 w-3.5 sm:h-4 sm:w-4" style={{ color: "#81D658" }} />
                         </span>
-                        <div className="absolute -bottom-0.5 -right-0.5 h-2 w-2 sm:h-2.5 sm:w-2.5 rounded-full bg-emerald-400 ring-2 ring-neutral-900" />
+                        <div className="absolute -bottom-0.5 -right-0.5 h-2 w-2 sm:h-2.5 sm:w-2.5 rounded-full ring-2 ring-neutral-900" style={{ backgroundColor: "#81D658" }} />
                       </div>
                       <div>
                         <div className="text-xs sm:text-sm font-medium text-neutral-200">{item.name}</div>
@@ -81,7 +81,7 @@ export default function FeaturesCards() {
                       </div>
                     </div>
                     <div className="text-right">
-                      <div className={`text-xs sm:text-sm font-medium ${item.positive ? "text-emerald-300" : "text-rose-300"}`}>
+                      <div className="text-xs sm:text-sm font-medium" style={{ color: item.positive ? "#81D658" : "#fda4af" }}>
                         {item.amount}
                       </div>
                       <div className="text-[10px] sm:text-xs text-neutral-400">{item.time}</div>
@@ -93,14 +93,14 @@ export default function FeaturesCards() {
           </div>
 
           {/* Card 2: Enhanced Built-in AI */}
-          <div className="group relative overflow-hidden transition-all duration-500 hover:border-green-500/30 hover:ring-green-500/20 bg-gradient-to-br from-neutral-900/80 to-neutral-950/90 border-white/10 border ring-white/5 ring-1 rounded-xl sm:rounded-2xl">
-            <div className="absolute -bottom-16 -right-16 h-40 sm:h-56 w-40 sm:w-56 rounded-full bg-gradient-to-tr from-emerald-500/30 via-green-500/20 to-teal-500/10 blur-3xl transition-all duration-700 group-hover:scale-110" />
-            <div className="absolute -top-8 -left-8 bg-gradient-to-br from-green-500/25 via-emerald-500/15 to-transparent w-28 sm:w-40 h-28 sm:h-40 rounded-full blur-2xl" />
+          <div className="group relative overflow-hidden transition-all duration-500 bg-gradient-to-br from-neutral-900/80 to-neutral-950/90 border-white/10 border ring-white/5 ring-1 rounded-xl sm:rounded-2xl hover:border-brand/30 hover:ring-brand/20">
+            <div className="absolute -bottom-16 -right-16 h-40 sm:h-56 w-40 sm:w-56 rounded-full blur-3xl transition-all duration-700 group-hover:scale-110" style={{ background: "linear-gradient(to top right, rgba(129, 214, 88, 0.3), rgba(129, 214, 88, 0.2), rgba(129, 214, 88, 0.1))" }} />
+            <div className="absolute -top-8 -left-8 w-28 sm:w-40 h-28 sm:h-40 rounded-full blur-2xl" style={{ background: "linear-gradient(to bottom right, rgba(129, 214, 88, 0.25), rgba(129, 214, 88, 0.15), transparent)" }} />
 
             <div className="p-4 sm:p-6">
               <div className="flex mb-3 sm:mb-4 items-start justify-between">
                 <span className="inline-flex items-center gap-1.5 text-[10px] sm:text-xs font-medium text-white bg-white/0 ring-white/20 ring-1 rounded-lg py-1 px-2 sm:px-2.5">
-                  <div className="h-1.5 w-1.5 animate-pulse bg-green-400 rounded-full" />
+                  <div className="h-1.5 w-1.5 animate-pulse rounded-full" style={{ backgroundColor: "#81D658" }} />
                   AI Powered
                 </span>
               </div>
@@ -121,7 +121,7 @@ export default function FeaturesCards() {
                     className="absolute top-1/2 left-1/2 origin-top-left border-t border-white w-1/2 h-full"
                     style={{ animation: "radar81 4s linear infinite" }}
                   >
-                    <span className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-green-500/50 to-green-500/0 origin-top-left -rotate-[55deg] blur-xl" />
+                    <span className="absolute top-0 left-0 w-full h-full origin-top-left -rotate-[55deg] blur-xl" style={{ background: "linear-gradient(to right, rgba(129, 214, 88, 0.5), rgba(129, 214, 88, 0))" }} />
                   </span>
                 </div>
 
@@ -149,9 +149,9 @@ export default function FeaturesCards() {
           </div>
 
           {/* Card 3: Enhanced Markets with Code Editor */}
-          <div className="group relative overflow-hidden rounded-xl sm:rounded-2xl border border-white/10 ring-1 ring-white/5 bg-gradient-to-br from-neutral-900/80 to-neutral-950/90 transition-all duration-500 hover:border-teal-500/30 hover:ring-teal-500/20">
-            <div className="absolute -bottom-12 -right-12 h-32 sm:h-48 w-32 sm:w-48 rounded-full bg-gradient-to-tr from-emerald-500/25 via-teal-500/15 to-green-500/20 blur-3xl transition-all duration-700 group-hover:scale-110" />
-            <div className="absolute -top-6 -left-6 bg-gradient-to-br from-teal-500/20 via-emerald-500/15 to-transparent w-24 sm:w-36 h-24 sm:h-36 rounded-full blur-2xl" />
+          <div className="group relative overflow-hidden rounded-xl sm:rounded-2xl border border-white/10 ring-1 ring-white/5 bg-gradient-to-br from-neutral-900/80 to-neutral-950/90 transition-all duration-500 hover:border-brand/30 hover:ring-brand/20">
+            <div className="absolute -bottom-12 -right-12 h-32 sm:h-48 w-32 sm:w-48 rounded-full blur-3xl transition-all duration-700 group-hover:scale-110" style={{ background: "linear-gradient(to top right, rgba(129, 214, 88, 0.25), rgba(129, 214, 88, 0.15), rgba(129, 214, 88, 0.2))" }} />
+            <div className="absolute -top-6 -left-6 w-24 sm:w-36 h-24 sm:h-36 rounded-full blur-2xl" style={{ background: "linear-gradient(to bottom right, rgba(129, 214, 88, 0.2), rgba(129, 214, 88, 0.15), transparent)" }} />
 
             <div className="p-4 sm:p-6">
               <div className="flex mb-3 sm:mb-4 items-start justify-between">
@@ -222,25 +222,25 @@ export default function FeaturesCards() {
                           {/* Code Lines */}
                           <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">1</span><span><span className="text-purple-400">class</span> <span className="text-neutral-200">Automation</span>:</span></div>
                           <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">2</span><span className="whitespace-pre">    <span className="text-purple-400">def</span> <span className="text-purple-400">__init__</span>(self):</span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">3</span><span className="whitespace-pre">        self.status = <span className="text-emerald-400">&quot;idle&quot;</span></span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">3</span><span className="whitespace-pre">        self.status = <span className="text-brand">&quot;idle&quot;</span></span></div>
                           <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">4</span><span></span></div>
                           <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">5</span><span className="whitespace-pre">    <span className="text-purple-400">def</span> <span className="text-purple-400">run</span>(self, event):</span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">6</span><span className="whitespace-pre">        <span className="text-purple-400">if</span> event == <span className="text-emerald-400">&quot;threshold_reached&quot;</span>:</span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">7</span><span className="whitespace-pre">            self.status = <span className="text-emerald-400">&quot;active&quot;</span></span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">8</span><span className="whitespace-pre">            <span className="text-purple-400">return</span> <span className="text-emerald-400">&quot;Automation triggered!&quot;</span></span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">6</span><span className="whitespace-pre">        <span className="text-purple-400">if</span> event == <span className="text-brand">&quot;threshold_reached&quot;</span>:</span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">7</span><span className="whitespace-pre">            self.status = <span className="text-brand">&quot;active&quot;</span></span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">8</span><span className="whitespace-pre">            <span className="text-purple-400">return</span> <span className="text-brand">&quot;Automation triggered!&quot;</span></span></div>
                           <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">9</span><span className="whitespace-pre">        <span className="text-purple-400">else</span>:</span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">10</span><span className="whitespace-pre">            <span className="text-purple-400">return</span> <span className="text-emerald-400">&quot;No action taken.&quot;</span></span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">10</span><span className="whitespace-pre">            <span className="text-purple-400">return</span> <span className="text-brand">&quot;No action taken.&quot;</span></span></div>
                           <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">11</span><span></span></div>
                           <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">12</span><span className="whitespace-pre">    <span className="text-purple-400">def</span> <span className="text-purple-400">get_status</span>(self):</span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">13</span><span className="whitespace-pre">        <span className="text-purple-400">return</span> f<span className="text-emerald-400">&quot;Status: &#123;self.status&#125;&quot;</span></span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">13</span><span className="whitespace-pre">        <span className="text-purple-400">return</span> f<span className="text-brand">&quot;Status: &#123;self.status&#125;&quot;</span></span></div>
                           <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">14</span><span></span></div>
                           <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">15</span><span className="whitespace-pre">    <span className="text-purple-400">def</span> <span className="text-purple-400">execute_trade</span>(self, symbol, amount):</span></div>
                           <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">16</span><span className="whitespace-pre">        <span className="text-purple-400">try</span>:</span></div>
                           <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">17</span><span className="whitespace-pre">            result = self.api.place_order(symbol, amount)</span></div>
                           <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">18</span><span className="whitespace-pre">            <span className="text-purple-400">return</span> result</span></div>
                           <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">19</span><span className="whitespace-pre">        <span className="text-purple-400">except</span> Exception <span className="text-purple-400">as</span> e:</span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">20</span><span className="whitespace-pre">            print(f<span className="text-emerald-400">&quot;Error: &#123;e&#125;&quot;</span>)</span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">21</span><span className="whitespace-pre">            <span className="text-purple-400">return</span> <span className="text-emerald-400">None</span></span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">20</span><span className="whitespace-pre">            print(f<span className="text-brand">&quot;Error: &#123;e&#125;&quot;</span>)</span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">21</span><span className="whitespace-pre">            <span className="text-purple-400">return</span> <span className="text-brand">None</span></span></div>
                           <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">22</span><span></span></div>
                           <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">23</span><span className="whitespace-pre">    <span className="text-purple-400">def</span> <span className="text-purple-400">analyze_market</span>(self):</span></div>
                           <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">24</span><span className="whitespace-pre">        data = self.fetch_market_data()</span></div>
@@ -250,17 +250,17 @@ export default function FeaturesCards() {
                           {/* Duplicate for seamless loop */}
                           <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">1</span><span><span className="text-purple-400">class</span> <span className="text-neutral-200">Automation</span>:</span></div>
                           <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">2</span><span className="whitespace-pre">    <span className="text-purple-400">def</span> <span className="text-purple-400">__init__</span>(self):</span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">3</span><span className="whitespace-pre">        self.status = <span className="text-emerald-400">&quot;idle&quot;</span></span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">3</span><span className="whitespace-pre">        self.status = <span className="text-brand">&quot;idle&quot;</span></span></div>
                           <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">4</span><span></span></div>
                           <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">5</span><span className="whitespace-pre">    <span className="text-purple-400">def</span> <span className="text-purple-400">run</span>(self, event):</span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">6</span><span className="whitespace-pre">        <span className="text-purple-400">if</span> event == <span className="text-emerald-400">&quot;threshold_reached&quot;</span>:</span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">7</span><span className="whitespace-pre">            self.status = <span className="text-emerald-400">&quot;active&quot;</span></span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">8</span><span className="whitespace-pre">            <span className="text-purple-400">return</span> <span className="text-emerald-400">&quot;Automation triggered!&quot;</span></span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">6</span><span className="whitespace-pre">        <span className="text-purple-400">if</span> event == <span className="text-brand">&quot;threshold_reached&quot;</span>:</span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">7</span><span className="whitespace-pre">            self.status = <span className="text-brand">&quot;active&quot;</span></span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">8</span><span className="whitespace-pre">            <span className="text-purple-400">return</span> <span className="text-brand">&quot;Automation triggered!&quot;</span></span></div>
                           <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">9</span><span className="whitespace-pre">        <span className="text-purple-400">else</span>:</span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">10</span><span className="whitespace-pre">            <span className="text-purple-400">return</span> <span className="text-emerald-400">&quot;No action taken.&quot;</span></span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">10</span><span className="whitespace-pre">            <span className="text-purple-400">return</span> <span className="text-brand">&quot;No action taken.&quot;</span></span></div>
                           <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">11</span><span></span></div>
                           <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">12</span><span className="whitespace-pre">    <span className="text-purple-400">def</span> <span className="text-purple-400">get_status</span>(self):</span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">13</span><span className="whitespace-pre">        <span className="text-purple-400">return</span> f<span className="text-emerald-400">&quot;Status: &#123;self.status&#125;&quot;</span></span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">13</span><span className="whitespace-pre">        <span className="text-purple-400">return</span> f<span className="text-brand">&quot;Status: &#123;self.status&#125;&quot;</span></span></div>
                         </div>
                       </div>
 
@@ -273,11 +273,11 @@ export default function FeaturesCards() {
           </div>
 
           {/* Card 4: Enhanced Data & Decisions */}
-          <div className="group relative overflow-hidden transition-all duration-500 hover:border-emerald-500/30 hover:ring-emerald-500/20 bg-gradient-to-br from-neutral-900/80 to-neutral-950/90 border-white/10 border ring-white/5 ring-1 rounded-xl sm:rounded-2xl">
+          <div className="group relative overflow-hidden transition-all duration-500 hover:border-brand/30 hover:ring-brand/20 bg-gradient-to-br from-neutral-900/80 to-neutral-950/90 border-white/10 border ring-white/5 ring-1 rounded-xl sm:rounded-2xl">
             <div className="p-4 sm:p-6">
               <div className="flex mb-3 sm:mb-4 items-start justify-between">
                 <span className="inline-flex items-center gap-1.5 text-[10px] sm:text-xs font-medium text-white bg-white/0 ring-white/20 ring-1 rounded-lg py-1 px-2 sm:px-2.5">
-                  <Hexagon className="w-2.5 h-2.5 text-emerald-400" />
+                  <Hexagon className="w-2.5 h-2.5 text-brand" />
                   Real-time
                 </span>
               </div>
@@ -303,22 +303,22 @@ export default function FeaturesCards() {
                 <div className="relative rounded-lg sm:rounded-xl bg-neutral-900/60 border border-white/10 ring-1 ring-white/5 overflow-hidden p-3 sm:p-6">
                   {/* Animated Connectors */}
                   <div className="absolute inset-y-0 left-20 right-20 sm:left-36 sm:right-36 z-0 flex flex-col items-stretch justify-center gap-1 sm:gap-2 pointer-events-none">
-                    <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/80 to-transparent relative overflow-hidden">
+                    <div className="h-px relative overflow-hidden" style={{ background: "linear-gradient(to right, transparent, rgba(129, 214, 88, 0.8), transparent)" }}>
                       <div
-                        className="absolute inset-0 bg-gradient-to-r from-emerald-400 to-green-400 h-full"
-                        style={{ animation: "flowLeft 2s ease-in-out infinite" }}
+                        className="absolute inset-0 h-full"
+                        style={{ animation: "flowLeft 2s ease-in-out infinite", background: "linear-gradient(to right, #81D658, #6BC248)" }}
                       />
                     </div>
-                    <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/60 to-transparent relative overflow-hidden">
+                    <div className="h-px relative overflow-hidden" style={{ background: "linear-gradient(to right, transparent, rgba(129, 214, 88, 0.6), transparent)" }}>
                       <div
-                        className="absolute inset-0 bg-gradient-to-r from-emerald-400 to-green-400 h-full"
-                        style={{ animation: "flowLeft 2s ease-in-out infinite 0.3s" }}
+                        className="absolute inset-0 h-full"
+                        style={{ animation: "flowLeft 2s ease-in-out infinite 0.3s", background: "linear-gradient(to right, #81D658, #6BC248)" }}
                       />
                     </div>
-                    <div className="h-px bg-gradient-to-r from-transparent via-emerald-400/40 to-transparent relative overflow-hidden">
+                    <div className="h-px relative overflow-hidden" style={{ background: "linear-gradient(to right, transparent, rgba(129, 214, 88, 0.4), transparent)" }}>
                       <div
-                        className="absolute inset-0 bg-gradient-to-r from-emerald-400 to-green-400 h-full"
-                        style={{ animation: "flowLeft 2s ease-in-out infinite 0.6s" }}
+                        className="absolute inset-0 h-full"
+                        style={{ animation: "flowLeft 2s ease-in-out infinite 0.6s", background: "linear-gradient(to right, #81D658, #6BC248)" }}
                       />
                     </div>
                   </div>
@@ -329,12 +329,12 @@ export default function FeaturesCards() {
                     <div className="flex flex-col items-center gap-1 sm:gap-2">
                       <div className="relative w-16 h-16 sm:w-28 sm:h-28 rounded-lg sm:rounded-xl border border-white/10 bg-gradient-to-br from-neutral-800 to-neutral-900 ring-1 ring-white/10 shadow-lg shadow-black/50 flex items-center justify-center overflow-hidden">
                         {/* Subtle glow behind icon */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-teal-500/10 via-transparent to-emerald-500/10" />
+                        <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom right, rgba(129, 214, 88, 0.1), transparent, rgba(129, 214, 88, 0.1))" }} />
                         {/* Gear icon with paper plane inside */}
                         <div className="relative">
                           <Settings2 className="w-8 h-8 sm:w-14 sm:h-14 text-neutral-400" strokeWidth={1.5} />
                           <div className="absolute inset-0 flex items-center justify-center">
-                            <svg className="w-3 h-3 sm:w-6 sm:h-6 text-teal-400" viewBox="0 0 24 24" fill="currentColor">
+                            <svg className="w-3 h-3 sm:w-6 sm:h-6" style={{ color: "#81D658" }} viewBox="0 0 24 24" fill="currentColor">
                               <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
                             </svg>
                           </div>
@@ -347,7 +347,7 @@ export default function FeaturesCards() {
                     <div className="flex flex-col items-center gap-1 sm:gap-2">
                       <div className="relative w-16 h-16 sm:w-28 sm:h-28 rounded-lg sm:rounded-xl border border-white/10 bg-gradient-to-br from-neutral-800 to-neutral-900 ring-1 ring-white/10 shadow-lg shadow-black/50 flex items-center justify-center overflow-hidden">
                         {/* Subtle glow behind icon */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 via-transparent to-teal-500/10" />
+                        <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom right, rgba(129, 214, 88, 0.1), transparent, rgba(129, 214, 88, 0.1))" }} />
                         {/* Wallet icon */}
                         <div className="relative">
                           <svg className="w-10 h-10 sm:w-16 sm:h-16" viewBox="0 0 64 64" fill="none">
@@ -357,15 +357,15 @@ export default function FeaturesCards() {
                             <path d="M8 20C8 17.7909 9.79086 16 12 16H52C54.2091 16 56 17.7909 56 20V24H8V20Z" fill="url(#flapGradient)" />
                             {/* Card slot */}
                             <rect x="36" y="30" width="16" height="12" rx="2" fill="#1a1a1a" />
-                            <circle cx="44" cy="36" r="3" fill="#10b981" />
+                            <circle cx="44" cy="36" r="3" fill="#81D658" />
                             <defs>
                               <linearGradient id="walletGradient" x1="8" y1="16" x2="56" y2="52" gradientUnits="userSpaceOnUse">
-                                <stop stopColor="#065f46" />
-                                <stop offset="1" stopColor="#047857" />
+                                <stop stopColor="#4a9e35" />
+                                <stop offset="1" stopColor="#5db344" />
                               </linearGradient>
                               <linearGradient id="flapGradient" x1="8" y1="16" x2="56" y2="24" gradientUnits="userSpaceOnUse">
-                                <stop stopColor="#10b981" />
-                                <stop offset="1" stopColor="#059669" />
+                                <stop stopColor="#81D658" />
+                                <stop offset="1" stopColor="#6BC248" />
                               </linearGradient>
                             </defs>
                           </svg>
@@ -379,7 +379,7 @@ export default function FeaturesCards() {
                 {/* Meta row */}
                 <div className="mt-2 sm:mt-3 flex items-center gap-1.5 sm:gap-2 flex-wrap">
                   <span className="inline-flex items-center gap-1 sm:gap-1.5 text-[9px] sm:text-[10px] px-1.5 sm:px-2 py-0.5 rounded bg-white/5 border border-white/10 text-gray-300">
-                    <TrendingUp className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-emerald-300" />
+                    <TrendingUp className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-brand" />
                     See Growth
                   </span>
                   <span className="text-[9px] sm:text-[10px] px-1.5 sm:px-2 py-0.5 rounded bg-black/40 border border-white/10 text-gray-300">On-chain metrics</span>

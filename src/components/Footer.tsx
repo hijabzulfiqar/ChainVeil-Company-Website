@@ -15,7 +15,11 @@ export default function Footer() {
           {/* Brand + blurb */}
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
             <a href="#" className="inline-flex items-center gap-2">
-              <img src="/chainveil.png" alt="ChainVeil" className="h-7 w-7 sm:h-8 sm:w-8" />
+              <img
+                src="/chainveil.png"
+                alt="ChainVeil"
+                className="h-7 w-7 sm:h-8 sm:w-8"
+              />
               <span
                 className="text-base sm:text-lg font-semibold uppercase"
                 style={{ color: "#81D658" }}
@@ -123,7 +127,7 @@ export default function Footer() {
         {/* Bottom copyright */}
         <div className="mt-8 sm:mt-10 text-center">
           <p className="text-[10px] sm:text-xs text-neutral-500">
-            © 2025 ChainVeil. All rights reserved.
+            © 2026 ChainVeil. All rights reserved.
           </p>
         </div>
       </div>
