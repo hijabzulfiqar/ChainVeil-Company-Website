@@ -47,14 +47,14 @@ export default function IndustryLeaders() {
                           </svg>
                         </div>
                         <p className="text-sm leading-relaxed text-neutral-900 mb-4">
-                          &ldquo;Working with the team was a game-changer. They translated our vision into a polished product and delivered beyond expectations.&rdquo;
+                          &ldquo;ChainVeil&apos;s cross-chain infrastructure reduced our bridge development time from months to days. Incredible tooling.&rdquo;
                         </p>
                         <div className="pt-3 border-t border-neutral-200 flex items-center justify-between">
                           <div className="flex items-center gap-2">
                             <div className="h-6 w-6 rounded-full bg-gradient-to-br from-brand to-brand-dark" />
                             <div>
                               <div className="text-xs font-medium text-neutral-900">Jordan Avery</div>
-                              <div className="text-xs text-neutral-500">Head of Product</div>
+                              <div className="text-xs text-neutral-500">CTO at DeFi Labs</div>
                             </div>
                           </div>
                           <div className="flex items-center gap-1">
@@ -91,14 +91,14 @@ export default function IndustryLeaders() {
                           </svg>
                         </div>
                         <p className="text-sm leading-relaxed text-neutral-900 mb-4">
-                          &ldquo;Incredible attention to detail. The analytics dashboard is now our most-used internal tool. Highly recommended!&rdquo;
+                          &ldquo;The on-chain analytics engine gives us real-time insights into protocol health that we couldn&apos;t get anywhere else.&rdquo;
                         </p>
                         <div className="pt-3 border-t border-neutral-200 flex items-center justify-between">
                           <div className="flex items-center gap-2">
                             <div className="h-6 w-6 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500" />
                             <div>
                               <div className="text-xs font-medium text-neutral-900">Taylor Chen</div>
-                              <div className="text-xs text-neutral-500">CTO at Fintech Co</div>
+                              <div className="text-xs text-neutral-500">Blockchain Architect</div>
                             </div>
                           </div>
                           <div className="flex items-center gap-1">
@@ -135,14 +135,14 @@ export default function IndustryLeaders() {
                           </svg>
                         </div>
                         <p className="text-sm leading-relaxed text-neutral-900 mb-4">
-                          &ldquo;Security was my biggest concern. ChainVeil&apos;s multi-layer protection gave me the confidence to invest significantly.&rdquo;
+                          &ldquo;The smart contract audit caught vulnerabilities our own team missed. ChainVeil is now essential to our deployment pipeline.&rdquo;
                         </p>
                         <div className="pt-3 border-t border-neutral-200 flex items-center justify-between">
                           <div className="flex items-center gap-2">
                             <div className="h-6 w-6 rounded-full bg-gradient-to-br from-brand to-brand-dark" />
                             <div>
-                              <div className="text-xs font-medium text-neutral-900">Marcus Rodriguez</div>
-                              <div className="text-xs text-neutral-500">Portfolio Manager</div>
+                              <div className="text-xs font-medium text-neutral-900">Sarah Kim</div>
+                              <div className="text-xs text-neutral-500">Security Lead at NFT Studio</div>
                             </div>
                           </div>
                           <div className="flex items-center gap-1">
@@ -160,10 +160,10 @@ export default function IndustryLeaders() {
             {/* Right: headline and CTA */}
             <div className="p-6 sm:p-10 lg:p-14 flex flex-col justify-center text-center lg:text-left">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-neutral-100 leading-[1.1]">
-                Trusted by Industry Leaders
+                Trusted by Web3 Builders
               </h2>
               <p className="mt-4 sm:mt-6 max-w-xl text-sm sm:text-base lg:text-lg text-neutral-400 leading-relaxed mx-auto lg:mx-0">
-                Join 50+ satisfied clients who&apos;ve transformed their digital presence with exceptional design and development.
+                Join 500+ blockchain teams who&apos;ve accelerated their development with ChainVeil&apos;s enterprise infrastructure.
               </p>
 
               <div className="mt-6 sm:mt-10 flex justify-center lg:justify-start">
@@ -171,7 +171,7 @@ export default function IndustryLeaders() {
                   href="#"
                   className="group inline-flex items-center gap-2 sm:gap-3 hover:bg-white/10 transition text-xs sm:text-sm font-semibold text-white bg-white/5 ring-1 ring-white/10 rounded-full py-2 sm:py-2.5 px-3 sm:px-4 backdrop-blur-lg"
                 >
-                  View all reviews
+                  View case studies
                   <span className="inline-flex items-center justify-center group-hover:translate-x-0.5 transition text-neutral-900 bg-white w-6 h-6 sm:w-7 sm:h-7 rounded-full">
                     <ArrowUpRight className="w-3 h-3 sm:w-4 sm:h-4" />
                   </span>

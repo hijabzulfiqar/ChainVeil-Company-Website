@@ -16,11 +16,11 @@ export default function FeaturesCards() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-16 sm:pt-24 pb-12 sm:pb-16">
         <div className="text-center mb-10 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] font-semibold tracking-tight">
-            <span className="text-neutral-200">Redefining the future of</span>
-            <span className="block text-neutral-100">investing solutions</span>
+            <span className="text-neutral-200">Powering the next generation of</span>
+            <span className="block text-neutral-100">blockchain infrastructure</span>
           </h2>
           <p className="mt-3 sm:mt-4 max-w-3xl mx-auto text-sm sm:text-base md:text-lg text-neutral-400 leading-relaxed px-2">
-            Harness cutting-edge technology built to the highest industry standard, setting a new benchmark for modern investing experiences.
+            Enterprise-grade distributed ledger solutions built on cutting-edge cryptographic protocols, setting a new standard for decentralized applications.
           </p>
         </div>
 
@@ -39,14 +39,14 @@ export default function FeaturesCards() {
               </div>
 
               <h3 className="text-base sm:text-lg font-semibold tracking-tight text-neutral-100 mb-2">
-                Effortless payments & requests
+                Seamless cross-chain transfers
               </h3>
               <p className="leading-relaxed text-xs sm:text-sm text-neutral-400 mb-4 sm:mb-6">
-                Easily send or request payments from anyone just like you would with your bank with support for 100+ currencies and instant settlements.
+                Execute atomic swaps and bridge assets across multiple blockchains with sub-second finality and minimal gas fees on 50+ supported networks.
               </p>
 
               <div className="flex items-center justify-between text-xs text-neutral-400 mb-3 sm:mb-4">
-                <span className="font-medium">Recent History</span>
+                <span className="font-medium">Recent Transactions</span>
                 <a className="inline-flex items-center gap-1 text-neutral-300 transition-colors group/link hover:[color:#81D658]" href="#">
                   <span>Show all</span>
                   <ArrowUpRight className="h-3 w-3 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
@@ -56,15 +56,15 @@ export default function FeaturesCards() {
               <div className="mb-3 sm:mb-4">
                 <div className="flex items-center gap-2 sm:gap-2.5 rounded-lg sm:rounded-xl border border-white/10 bg-white/5 px-3 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm text-neutral-300 transition-all duration-300 hover:bg-white/10 focus-within:border-[#81D658]/50 focus-within:ring-1 focus-within:ring-[#81D658]/20">
                   <Search className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-neutral-400" />
-                  <span className="flex-1">Search payment requests</span>
+                  <span className="flex-1">Search transactions by hash</span>
                   <span className="text-[10px] sm:text-xs text-neutral-500 hidden sm:inline">⌘K</span>
                 </div>
               </div>
 
               <div className="space-y-2 sm:space-y-3">
                 {[
-                  { name: "John Doe", role: "Premium Member", amount: "+0.025 ETH", time: "2 hours ago", positive: true },
-                  { name: "Sean Dale", role: "Standard Member", amount: "+0.025 ETH", time: "5 hours ago", positive: true },
+                  { name: "0x8f3...a2b", role: "Token Bridge", amount: "+2.45 ETH", time: "2 blocks ago", positive: true },
+                  { name: "0x4c1...f8e", role: "Swap Execute", amount: "+0.85 ETH", time: "5 blocks ago", positive: true },
                 ].map((item) => (
                   <div key={item.name} className="flex items-center justify-between p-2.5 sm:p-3 rounded-lg sm:rounded-xl bg-white/5 border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-white/20">
                     <div className="flex items-center gap-2 sm:gap-3">
@@ -105,10 +105,10 @@ export default function FeaturesCards() {
               </div>
 
               <h3 className="text-base sm:text-lg font-semibold tracking-tight text-neutral-100 mb-2">
-                Built-in AI for smarter workflows
+                AI-powered smart contract analysis
               </h3>
               <p className="leading-relaxed text-xs sm:text-sm text-neutral-400 mb-4 sm:mb-6">
-                Get your investments on autopilot with powerful AI integrated right into the platform always ready to help you stay ahead of market trends.
+                Leverage machine learning to audit smart contracts, detect vulnerabilities, and optimize gas usage before deployment on mainnet.
               </p>
 
               {/* Radar visualization */}
@@ -126,22 +126,22 @@ export default function FeaturesCards() {
 
                 {/* Floating chips - hidden on mobile, shown on larger screens */}
                 <div className="absolute top-2 sm:top-4 left-2 sm:left-4 hidden sm:block">
-                  <span className="inline-flex items-center ring-1 ring-white/10 text-[10px] sm:text-xs font-medium text-neutral-200 bg-white/10 rounded-full py-0.5 sm:py-1 px-2 sm:px-3 backdrop-blur-sm">consult</span>
+                  <span className="inline-flex items-center ring-1 ring-white/10 text-[10px] sm:text-xs font-medium text-neutral-200 bg-white/10 rounded-full py-0.5 sm:py-1 px-2 sm:px-3 backdrop-blur-sm">audit</span>
                 </div>
                 <div className="absolute top-2 sm:top-3 right-2 sm:right-4 hidden sm:block">
-                  <span className="inline-flex items-center text-[10px] sm:text-xs font-medium text-neutral-200 bg-white/10 ring-white/10 ring-1 rounded-full py-0.5 sm:py-1 px-2 sm:px-3 backdrop-blur-sm">How to check balance?</span>
+                  <span className="inline-flex items-center text-[10px] sm:text-xs font-medium text-neutral-200 bg-white/10 ring-white/10 ring-1 rounded-full py-0.5 sm:py-1 px-2 sm:px-3 backdrop-blur-sm">Check gas estimates?</span>
                 </div>
                 <div className="absolute left-1 sm:left-3 top-1/2 -translate-y-1/2 hidden sm:block">
-                  <span className="inline-flex items-center text-[10px] sm:text-xs font-medium text-neutral-200 bg-white/10 ring-white/10 ring-1 rounded-full py-0.5 sm:py-1 px-2 sm:px-3 backdrop-blur-sm">Summarize</span>
+                  <span className="inline-flex items-center text-[10px] sm:text-xs font-medium text-neutral-200 bg-white/10 ring-white/10 ring-1 rounded-full py-0.5 sm:py-1 px-2 sm:px-3 backdrop-blur-sm">Optimize</span>
                 </div>
                 <div className="absolute right-1 sm:right-3 top-1/2 -translate-y-1/2 hidden sm:block">
-                  <span className="inline-flex items-center text-[10px] sm:text-xs font-medium text-neutral-200 bg-white/10 ring-white/10 ring-1 rounded-full py-0.5 sm:py-1 px-2 sm:px-3 backdrop-blur-sm">report</span>
+                  <span className="inline-flex items-center text-[10px] sm:text-xs font-medium text-neutral-200 bg-white/10 ring-white/10 ring-1 rounded-full py-0.5 sm:py-1 px-2 sm:px-3 backdrop-blur-sm">verify</span>
                 </div>
                 <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4 hidden sm:block">
-                  <span className="inline-flex items-center text-[10px] sm:text-xs font-medium text-neutral-200 bg-white/10 ring-white/10 ring-1 rounded-full py-0.5 sm:py-1 px-2 sm:px-3 backdrop-blur-sm">invest</span>
+                  <span className="inline-flex items-center text-[10px] sm:text-xs font-medium text-neutral-200 bg-white/10 ring-white/10 ring-1 rounded-full py-0.5 sm:py-1 px-2 sm:px-3 backdrop-blur-sm">deploy</span>
                 </div>
                 <div className="absolute bottom-2 sm:bottom-3 right-2 sm:right-4 hidden sm:block">
-                  <span className="inline-flex items-center text-[10px] sm:text-xs font-medium text-neutral-200 bg-white/10 ring-white/10 ring-1 rounded-full py-0.5 sm:py-1 px-2 sm:px-3 backdrop-blur-sm">Generate report</span>
+                  <span className="inline-flex items-center text-[10px] sm:text-xs font-medium text-neutral-200 bg-white/10 ring-white/10 ring-1 rounded-full py-0.5 sm:py-1 px-2 sm:px-3 backdrop-blur-sm">Security scan</span>
                 </div>
               </div>
             </div>
@@ -161,10 +161,10 @@ export default function FeaturesCards() {
               </div>
 
               <h3 className="text-base sm:text-lg font-semibold text-neutral-100 tracking-tight mb-2">
-                Instant access to all markets
+                Developer-first smart contracts
               </h3>
               <p className="leading-relaxed text-xs sm:text-sm text-neutral-400 mb-4 sm:mb-6">
-                Access real-time data across crypto and stock markets instantly, without switching platforms. Stream live prices and execute trades seamlessly.
+                Build, test, and deploy Solidity contracts with our integrated development environment. Real-time compilation, automated testing, and one-click mainnet deployment.
               </p>
 
               {/* Code Editor Window */}
@@ -180,7 +180,7 @@ export default function FeaturesCards() {
                     </button>
                   </div>
                   <div className="flex-1 px-2 sm:px-3">
-                    <div className="mx-auto max-w-[100px] sm:max-w-xs rounded-md bg-neutral-800/60 px-2 sm:px-3 py-0.5 sm:py-1 text-center text-[9px] sm:text-xs text-neutral-400 ring-1 ring-white/5">automation.py</div>
+                    <div className="mx-auto max-w-[100px] sm:max-w-xs rounded-md bg-neutral-800/60 px-2 sm:px-3 py-0.5 sm:py-1 text-center text-[9px] sm:text-xs text-neutral-400 ring-1 ring-white/5">contract.sol</div>
                   </div>
                   <div className="flex items-center gap-1 sm:gap-1.5 text-neutral-400">
                     <button className="hidden sm:inline-flex h-6 w-6 items-center justify-center rounded hover:bg-white/5">
@@ -219,47 +219,35 @@ export default function FeaturesCards() {
                       <div className="overflow-hidden h-full relative">
                         <div className="font-mono text-[11px] sm:text-[12px] leading-relaxed" style={{ animation: "smoothCodeScroll 20s linear infinite" }}>
                           {/* Code Lines */}
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">1</span><span><span className="text-purple-400">class</span> <span className="text-neutral-200">Automation</span>:</span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">2</span><span className="whitespace-pre">    <span className="text-purple-400">def</span> <span className="text-purple-400">__init__</span>(self):</span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">3</span><span className="whitespace-pre">        self.status = <span className="text-brand">&quot;idle&quot;</span></span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">4</span><span></span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">5</span><span className="whitespace-pre">    <span className="text-purple-400">def</span> <span className="text-purple-400">run</span>(self, event):</span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">6</span><span className="whitespace-pre">        <span className="text-purple-400">if</span> event == <span className="text-brand">&quot;threshold_reached&quot;</span>:</span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">7</span><span className="whitespace-pre">            self.status = <span className="text-brand">&quot;active&quot;</span></span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">8</span><span className="whitespace-pre">            <span className="text-purple-400">return</span> <span className="text-brand">&quot;Automation triggered!&quot;</span></span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">9</span><span className="whitespace-pre">        <span className="text-purple-400">else</span>:</span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">10</span><span className="whitespace-pre">            <span className="text-purple-400">return</span> <span className="text-brand">&quot;No action taken.&quot;</span></span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">1</span><span><span className="text-neutral-500">// SPDX-License-Identifier: MIT</span></span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">2</span><span><span className="text-brand">pragma</span> solidity ^0.8.19;</span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">3</span><span></span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">4</span><span><span className="text-brand">contract</span> <span className="text-neutral-200">ChainVeil</span> &#123;</span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">5</span><span className="whitespace-pre">    <span className="text-brand">mapping</span>(address =&gt; uint256) balances;</span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">6</span><span className="whitespace-pre">    <span className="text-brand">event</span> Transfer(address indexed from);</span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">7</span><span></span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">8</span><span className="whitespace-pre">    <span className="text-brand">function</span> <span className="text-brand">deposit</span>() <span className="text-brand">external payable</span> &#123;</span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">9</span><span className="whitespace-pre">        balances[msg.sender] += msg.value;</span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">10</span><span className="whitespace-pre">    &#125;</span></div>
                           <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">11</span><span></span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">12</span><span className="whitespace-pre">    <span className="text-purple-400">def</span> <span className="text-purple-400">get_status</span>(self):</span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">13</span><span className="whitespace-pre">        <span className="text-purple-400">return</span> f<span className="text-brand">&quot;Status: &#123;self.status&#125;&quot;</span></span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">14</span><span></span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">15</span><span className="whitespace-pre">    <span className="text-purple-400">def</span> <span className="text-purple-400">execute_trade</span>(self, symbol, amount):</span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">16</span><span className="whitespace-pre">        <span className="text-purple-400">try</span>:</span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">17</span><span className="whitespace-pre">            result = self.api.place_order(symbol, amount)</span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">18</span><span className="whitespace-pre">            <span className="text-purple-400">return</span> result</span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">19</span><span className="whitespace-pre">        <span className="text-purple-400">except</span> Exception <span className="text-purple-400">as</span> e:</span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">20</span><span className="whitespace-pre">            print(f<span className="text-brand">&quot;Error: &#123;e&#125;&quot;</span>)</span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">21</span><span className="whitespace-pre">            <span className="text-purple-400">return</span> <span className="text-brand">None</span></span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">22</span><span></span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">23</span><span className="whitespace-pre">    <span className="text-purple-400">def</span> <span className="text-purple-400">analyze_market</span>(self):</span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">24</span><span className="whitespace-pre">        data = self.fetch_market_data()</span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">25</span><span className="whitespace-pre">        signals = self.process_indicators(data)</span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">26</span><span className="whitespace-pre">        <span className="text-purple-400">return</span> signals</span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">12</span><span className="whitespace-pre">    <span className="text-brand">function</span> <span className="text-brand">withdraw</span>(uint256 amt) <span className="text-brand">external</span> &#123;</span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">13</span><span className="whitespace-pre">        <span className="text-brand">require</span>(balances[msg.sender] &gt;= amt);</span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">14</span><span className="whitespace-pre">        balances[msg.sender] -= amt;</span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">15</span><span className="whitespace-pre">        payable(msg.sender).transfer(amt);</span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">16</span><span className="whitespace-pre">    &#125;</span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">17</span><span></span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">18</span><span className="whitespace-pre">    <span className="text-brand">function</span> <span className="text-brand">getBalance</span>() <span className="text-brand">view returns</span> (uint256) &#123;</span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">19</span><span className="whitespace-pre">        <span className="text-brand">return</span> balances[msg.sender];</span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">20</span><span className="whitespace-pre">    &#125;</span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">21</span><span>&#125;</span></div>
 
                           {/* Duplicate for seamless loop */}
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">1</span><span><span className="text-purple-400">class</span> <span className="text-neutral-200">Automation</span>:</span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">2</span><span className="whitespace-pre">    <span className="text-purple-400">def</span> <span className="text-purple-400">__init__</span>(self):</span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">3</span><span className="whitespace-pre">        self.status = <span className="text-brand">&quot;idle&quot;</span></span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">4</span><span></span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">5</span><span className="whitespace-pre">    <span className="text-purple-400">def</span> <span className="text-purple-400">run</span>(self, event):</span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">6</span><span className="whitespace-pre">        <span className="text-purple-400">if</span> event == <span className="text-brand">&quot;threshold_reached&quot;</span>:</span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">7</span><span className="whitespace-pre">            self.status = <span className="text-brand">&quot;active&quot;</span></span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">8</span><span className="whitespace-pre">            <span className="text-purple-400">return</span> <span className="text-brand">&quot;Automation triggered!&quot;</span></span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">9</span><span className="whitespace-pre">        <span className="text-purple-400">else</span>:</span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">10</span><span className="whitespace-pre">            <span className="text-purple-400">return</span> <span className="text-brand">&quot;No action taken.&quot;</span></span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">11</span><span></span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">12</span><span className="whitespace-pre">    <span className="text-purple-400">def</span> <span className="text-purple-400">get_status</span>(self):</span></div>
-                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">13</span><span className="whitespace-pre">        <span className="text-purple-400">return</span> f<span className="text-brand">&quot;Status: &#123;self.status&#125;&quot;</span></span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">1</span><span><span className="text-neutral-500">// SPDX-License-Identifier: MIT</span></span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">2</span><span><span className="text-brand">pragma</span> solidity ^0.8.19;</span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">3</span><span></span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">4</span><span><span className="text-brand">contract</span> <span className="text-neutral-200">ChainVeil</span> &#123;</span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">5</span><span className="whitespace-pre">    <span className="text-brand">mapping</span>(address =&gt; uint256) balances;</span></div>
+                          <div className="flex gap-4"><span className="w-6 text-right text-neutral-500 select-none">6</span><span className="whitespace-pre">    <span className="text-brand">event</span> Transfer(address indexed from);</span></div>
                         </div>
                       </div>
 
@@ -282,22 +270,22 @@ export default function FeaturesCards() {
               </div>
 
               <h3 className="text-base sm:text-lg font-semibold tracking-tight text-neutral-100 mb-2">
-                Data that drives decisions
+                On-chain analytics engine
               </h3>
               <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed mb-4 sm:mb-6">
-                Analyse your investments from every angle. Dive into performance and returns, and easily filter your data using advanced analytics and machine learning insights.
+                Track wallet activity, monitor token flows, and analyze DeFi protocols in real-time. Powerful on-chain data indexing with machine learning-powered insights.
               </p>
 
               <div className="relative overflow-visible bg-black/40 border-white/10 border rounded-xl sm:rounded-2xl p-3 sm:p-4 pb-6 sm:pb-8">
                 <div
                   className="absolute inset-0 pointer-events-none rounded-2xl"
                   style={{
-                    background: "radial-gradient(220px 140px at 0% 100%, rgba(139,92,246,0.20), transparent 60%), radial-gradient(240px 160px at 100% 0%, rgba(232,121,249,0.10), transparent 70%), linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00))"
+                    background: "radial-gradient(220px 140px at 0% 100%, rgba(129, 214, 88, 0.15), transparent 60%), radial-gradient(240px 160px at 100% 0%, rgba(107, 194, 72, 0.10), transparent 70%), linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00))"
                   }}
                 />
 
-                <h3 className="text-base sm:text-lg tracking-tight font-semibold mb-2">Crypto Data Solutions</h3>
-                <p className="text-xs sm:text-sm text-gray-300 mb-3 sm:mb-4">Your on-chain guide to making informed crypto decisions.</p>
+                <h3 className="text-base sm:text-lg tracking-tight font-semibold mb-2">Blockchain Data Pipeline</h3>
+                <p className="text-xs sm:text-sm text-gray-300 mb-3 sm:mb-4">Real-time indexing and querying for EVM-compatible chains.</p>
 
                 <div className="relative rounded-lg sm:rounded-xl bg-neutral-900/60 border border-white/10 ring-1 ring-white/5 overflow-hidden p-3 sm:p-6">
                   {/* Animated Connectors */}
@@ -343,7 +331,7 @@ export default function FeaturesCards() {
                           </svg>
                         </div>
                       </div>
-                      <span className="text-[10px] sm:text-xs text-neutral-300">Our solution</span>
+                      <span className="text-[10px] sm:text-xs text-neutral-300">Data indexer</span>
                     </div>
 
                     {/* Right Node - Your stack */}
@@ -354,7 +342,7 @@ export default function FeaturesCards() {
                         {/* Stack image */}
                         <img
                           src="https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=200&h=200&fit=crop&auto=format"
-                          alt="Your stack"
+                          alt="Your dApp"
                           className="w-full h-full object-cover opacity-80"
                         />
                         {/* Overlay icon */}
@@ -364,7 +352,7 @@ export default function FeaturesCards() {
                           </svg>
                         </div>
                       </div>
-                      <span className="text-[10px] sm:text-xs text-neutral-300">Your stack</span>
+                      <span className="text-[10px] sm:text-xs text-neutral-300">Your dApp</span>
                     </div>
                   </div>
                 </div>
@@ -375,7 +363,7 @@ export default function FeaturesCards() {
                     <TrendingUp className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-brand" />
                     See Growth
                   </span>
-                  <span className="text-[9px] sm:text-[10px] px-1.5 sm:px-2 py-0.5 rounded bg-black/40 border border-white/10 text-gray-300">On-chain metrics</span>
+                  <span className="text-[9px] sm:text-[10px] px-1.5 sm:px-2 py-0.5 rounded bg-black/40 border border-white/10 text-gray-300">Multi-chain</span>
                   <span className="text-[9px] sm:text-[10px] px-1.5 sm:px-2 py-0.5 rounded bg-black/40 border border-white/10 text-gray-300">Last 24h</span>
                 </div>
               </div>

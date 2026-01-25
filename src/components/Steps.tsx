@@ -8,11 +8,11 @@ export default function Steps() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-12 sm:pt-20 pb-10 sm:pb-16">
         <div className="text-center mb-8 sm:mb-14">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.1]">
-            <span className="text-neutral-200">Simple Steps to</span>
-            <span className="block text-neutral-100">crypto confidence</span>
+            <span className="text-neutral-200">Deploy your first</span>
+            <span className="block text-neutral-100">smart contract today</span>
           </h2>
           <p className="mt-3 sm:mt-4 max-w-3xl mx-auto text-sm sm:text-base md:text-lg text-neutral-400 leading-relaxed px-2">
-            Get started in minutes and take full control of your digital assets. From signup to secure trading, everything is built for speed and clarity.
+            From development to mainnet deployment in minutes. Our streamlined workflow handles the complexity so you can focus on building.
           </p>
         </div>
 
@@ -25,10 +25,10 @@ export default function Steps() {
           <div className="relative max-w-5xl mx-auto px-2 sm:px-6 space-y-10 sm:space-y-20">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-10">
               {[
-                "Create your account in seconds",
-                "Complete identity verification process",
-                "Fund your wallet with preferred methods",
-                "Start trading instantly with real-time tools",
+                "Connect your wallet and sign in securely",
+                "Write or import your smart contract code",
+                "Test on testnet with one-click deployment",
+                "Deploy to mainnet with automated verification",
               ].map((step, i) => (
                 <div key={i} className="flex flex-col items-center text-center">
                   <div className="h-14 sm:h-20 w-full relative flex items-center justify-center">
@@ -43,7 +43,7 @@ export default function Steps() {
 
             <div className="mt-6 sm:mt-10 flex justify-center">
               <a href="#" className="flex justify-center gap-2 items-center font-semibold relative z-10 overflow-hidden group text-sm sm:text-lg text-neutral-900 bg-gray-50 max-w-fit border-gray-50 border-2 rounded-full py-1.5 sm:py-2 px-3 sm:px-4 shadow-xl backdrop-blur-md hover:bg-brand hover:text-white hover:border-brand transition-all duration-300">
-                Create Account
+                Start Building
                 <ArrowUpRight className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
               </a>
             </div>

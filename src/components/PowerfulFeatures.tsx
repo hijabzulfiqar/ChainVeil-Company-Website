@@ -15,22 +15,22 @@ export default function PowerfulFeatures() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-16 sm:pt-24 pb-12 sm:pb-16">
         <div className="text-center mb-10 sm:mb-14">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.1]">
-            <span className="text-neutral-200">Powerful features built for</span>
-            <span className="block text-neutral-100">crypto confidence</span>
+            <span className="text-neutral-200">Enterprise-grade tools for</span>
+            <span className="block text-neutral-100">blockchain developers</span>
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-neutral-400 max-w-3xl mt-3 sm:mt-4 mx-auto leading-relaxed px-2">
-            Streamline your experience with tools designed to keep you secure, informed, and in control every step of the way.
+            Build decentralized applications with confidence using our comprehensive suite of development, testing, and deployment tools.
           </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {[
-            { icon: Send, title: "Instant transfers", description: "Send and receive crypto in seconds, without delays or bottlenecks." },
-            { icon: LineChart, title: "Risk analysis", description: "Stay ahead of the market with smart insights into potential risks." },
-            { icon: Bell, title: "Real-time alerts", description: "Get notified instantly about price moves, trends, and key events." },
-            { icon: ReceiptText, title: "Tax Optimization", description: "Automate reports and minimise your tax burden with built-in tools." },
-            { icon: Gauge, title: "Autopilot mode", description: "Let smart algorithms manage your assets while you stay hands-off." },
-            { icon: Shield, title: "Maximum security", description: "Protect your funds with top-tier encryption and multi-layer defences." },
+            { icon: Send, title: "Cross-chain bridges", description: "Transfer assets seamlessly between blockchains with atomic swap technology." },
+            { icon: LineChart, title: "Gas optimization", description: "AI-powered analysis to minimize transaction costs and maximize efficiency." },
+            { icon: Bell, title: "Block notifications", description: "Get instant alerts for contract events, whale movements, and network changes." },
+            { icon: ReceiptText, title: "Smart contract audit", description: "Automated security scanning and vulnerability detection before deployment." },
+            { icon: Gauge, title: "Node infrastructure", description: "Scalable RPC endpoints and dedicated nodes for high-throughput applications." },
+            { icon: Shield, title: "Multi-sig security", description: "Enterprise-grade wallet security with customizable signature requirements." },
           ].map((feature) => (
             <div key={feature.title} className="rounded-xl sm:rounded-2xl border border-white/5 bg-neutral-900/40 p-4 sm:p-6 md:p-7 transition hover:bg-white/5">
               <div className="flex items-start gap-3 sm:gap-4">

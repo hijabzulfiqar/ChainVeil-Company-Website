@@ -16,15 +16,15 @@ export default function Hero() {
   return (
     <section className="relative">
       <div className="text-center max-w-4xl mx-auto pt-4 sm:pt-6 px-4 sm:px-6 space-y-6 sm:space-y-8">
-        <p className="text-xs sm:text-sm text-neutral-400">Ship faster with data you trust</p>
+        <p className="text-xs sm:text-sm text-neutral-400">Enterprise-grade blockchain infrastructure</p>
         <h1 className="mt-2 sm:mt-3 text-3xl sm:text-5xl lg:text-6xl font-semibold tracking-tight">
-          Take control of your
+          Building the future of
           <span className="block bg-clip-text text-transparent bg-gradient-to-br from-neutral-50 to-neutral-300">
-            Product Analytics
+            Decentralized Technology
           </span>
         </h1>
         <p className="text-sm sm:text-base text-neutral-400 max-w-2xl mt-3 sm:mt-5 mx-auto px-2">
-          Your funnels, cohorts, and retention streamlined. ChainVeil delivers real-time insights, low overhead, and next-level security.
+          Harness the power of distributed ledger technology. ChainVeil delivers secure smart contracts, seamless DeFi integration, and enterprise blockchain solutions.
         </p>
 
         <div>
@@ -90,22 +90,22 @@ export default function Hero() {
                   </span>
                   <div>
                     <div className="text-xs font-medium">Alex Carter</div>
-                    <div className="text-[10px] text-neutral-400">Product</div>
+                    <div className="text-[10px] text-neutral-400">Developer</div>
                   </div>
                 </div>
 
                 <nav className="mt-4 space-y-0.5">
                   <a className="flex items-center gap-2 rounded-md bg-white/5 px-2 py-1.5 text-xs text-white ring-1 ring-white/10" href="#">
                     <LayoutDashboard className="h-3.5 w-3.5" />
-                    Overview
+                    Dashboard
                   </a>
                   <a className="flex items-center gap-2 rounded-md px-2 py-1.5 text-xs text-neutral-300 hover:bg-white/5 hover:text-white transition" href="#">
                     <BarChart3 className="h-3.5 w-3.5" />
-                    Analytics
+                    Transactions
                   </a>
                   <a className="flex items-center gap-2 rounded-md px-2 py-1.5 text-xs text-neutral-300 hover:bg-white/5 hover:text-white transition" href="#">
                     <Database className="h-3.5 w-3.5" />
-                    Sources
+                    Smart Contracts
                   </a>
                   <a className="flex items-center gap-2 rounded-md px-2 py-1.5 text-xs text-neutral-300 hover:bg-white/5 hover:text-white transition" href="#">
                     <Bell className="h-3.5 w-3.5" />
@@ -123,7 +123,7 @@ export default function Hero() {
                 <div className="p-3 sm:p-4">
                   <div className="mb-3 sm:mb-4">
                     <div className="flex items-center justify-between mb-2 sm:mb-3">
-                      <h2 className="text-sm sm:text-base font-semibold tracking-tight">Dashboard Overview</h2>
+                      <h2 className="text-sm sm:text-base font-semibold tracking-tight">Blockchain Overview</h2>
                       <span className="inline-flex items-center gap-1 rounded-full px-1.5 sm:px-2 py-0.5 text-[10px] sm:text-xs font-medium ring-1" style={{ backgroundColor: "rgba(129, 214, 88, 0.1)", color: "#81D658", borderColor: "rgba(129, 214, 88, 0.2)" }}>
                         <TrendingUp className="h-2.5 w-2.5 sm:h-3 sm:w-3" />
                         +12.4%
@@ -133,10 +133,10 @@ export default function Hero() {
                     {/* Metric cards */}
                     <div className="grid grid-cols-2 gap-2 sm:gap-3 mb-3 sm:mb-4">
                       {[
-                        { label: "Total Events", value: "2.4M", change: "+8.2%", positive: true },
-                        { label: "Conversion", value: "4.2%", change: "+0.3%", positive: true },
-                        { label: "Revenue", value: "$124.0K", change: "+15.1%", positive: true },
-                        { label: "Users", value: "18.3K", change: "-2.1%", positive: false },
+                        { label: "Transactions", value: "2.4M", change: "+8.2%", positive: true },
+                        { label: "Gas Saved", value: "42.8%", change: "+0.3%", positive: true },
+                        { label: "TVL", value: "$124.0M", change: "+15.1%", positive: true },
+                        { label: "Active Nodes", value: "18.3K", change: "-2.1%", positive: false },
                       ].map((metric) => (
                         <div key={metric.label} className="rounded-lg border border-white/10 bg-neutral-900/60 p-2 sm:p-3">
                           <div className="text-[10px] sm:text-xs text-neutral-400">{metric.label}</div>
@@ -153,7 +153,7 @@ export default function Hero() {
                   <div className="grid grid-cols-2 gap-2 sm:gap-4 mb-3 sm:mb-4">
                     <div className="rounded-lg sm:rounded-xl border border-white/10 bg-neutral-900/60 p-2 sm:p-4">
                       <div className="flex items-center justify-between mb-2 sm:mb-3">
-                        <h3 className="text-[10px] sm:text-sm font-semibold">Event Timeline</h3>
+                        <h3 className="text-[10px] sm:text-sm font-semibold">Block Activity</h3>
                         <button className="text-neutral-400 hover:text-white hidden sm:block">
                           <MoreHorizontal className="h-4 w-4" />
                         </button>
@@ -171,7 +171,7 @@ export default function Hero() {
 
                     <div className="rounded-lg sm:rounded-xl border border-white/10 bg-neutral-900/60 p-2 sm:p-4">
                       <div className="flex items-center justify-between mb-2 sm:mb-3">
-                        <h3 className="text-[10px] sm:text-sm font-semibold">Top Sources</h3>
+                        <h3 className="text-[10px] sm:text-sm font-semibold">Network Load</h3>
                         <button className="text-neutral-400 hover:text-white hidden sm:block">
                           <MoreHorizontal className="h-4 w-4" />
                         </button>
@@ -191,24 +191,24 @@ export default function Hero() {
                   {/* Table - Hidden on very small screens */}
                   <div className="hidden sm:block rounded-lg sm:rounded-xl border border-white/10 bg-neutral-900/60 overflow-hidden">
                     <div className="flex items-center justify-between px-3 sm:px-4 py-2 sm:py-3 border-b border-white/10">
-                      <h4 className="text-xs sm:text-sm font-semibold">Recent Events</h4>
+                      <h4 className="text-xs sm:text-sm font-semibold">Recent Transactions</h4>
                       <a href="#" className="text-[10px] sm:text-xs text-neutral-300 hover:text-white">View all</a>
                     </div>
                     <div className="overflow-x-auto">
                       <table className="w-full text-left">
                         <thead className="text-[10px] sm:text-xs text-neutral-400">
                           <tr className="border-b border-white/10">
-                            <th className="px-3 sm:px-4 py-1.5 sm:py-2 font-medium">Event</th>
-                            <th className="px-3 sm:px-4 py-1.5 sm:py-2 font-medium hidden md:table-cell">User</th>
-                            <th className="px-3 sm:px-4 py-1.5 sm:py-2 font-medium">Count</th>
+                            <th className="px-3 sm:px-4 py-1.5 sm:py-2 font-medium">Type</th>
+                            <th className="px-3 sm:px-4 py-1.5 sm:py-2 font-medium hidden md:table-cell">Hash</th>
+                            <th className="px-3 sm:px-4 py-1.5 sm:py-2 font-medium">Block</th>
                             <th className="px-3 sm:px-4 py-1.5 sm:py-2 font-medium">Time</th>
                           </tr>
                         </thead>
                         <tbody className="divide-y divide-white/10 text-[10px] sm:text-xs">
                           {[
-                            { event: "signup_completed", color: "#81D658", user: "user_1204", count: "1.2K", time: "2m ago" },
-                            { event: "page_view", color: "#6BC248", user: "user_8847", count: "892", time: "5m ago" },
-                            { event: "purchase", color: "#9AE076", user: "user_5521", count: "456", time: "8m ago" },
+                            { event: "contract_deploy", color: "#81D658", user: "0x8f3...a2b", count: "#18204", time: "2m ago" },
+                            { event: "token_transfer", color: "#6BC248", user: "0x4c1...f8e", count: "#18203", time: "5m ago" },
+                            { event: "swap_executed", color: "#9AE076", user: "0x7d2...c3a", count: "#18202", time: "8m ago" },
                           ].map((row) => (
                             <tr key={row.event} className="hover:bg-white/5">
                               <td className="px-3 sm:px-4 py-1.5 sm:py-2">

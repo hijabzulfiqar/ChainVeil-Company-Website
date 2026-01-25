@@ -4,20 +4,20 @@ import { useState } from "react";
 
 const faqData = [
   {
-    question: "How do I create and verify my ChainVeil account?",
-    answer: "Creating a ChainVeil account is easy—just sign up with your email and a secure password. After that, confirm your email address, and you're ready to start exploring the platform. No lengthy forms or complicated steps involved.",
+    question: "What blockchain networks does ChainVeil support?",
+    answer: "ChainVeil supports all major EVM-compatible networks including Ethereum, Polygon, Arbitrum, Optimism, and BSC. We also provide cross-chain bridging to Solana, Avalanche, and 20+ other networks with sub-second finality.",
   },
   {
-    question: "How secure is ChainVeil with my digital assets?",
-    answer: "We use industry-standard encryption, multi-sig cold storage, and routine security audits. Your funds and data are protected by multiple layers of defense.",
+    question: "How does the smart contract audit process work?",
+    answer: "Our AI-powered security scanner analyzes your Solidity code for vulnerabilities, gas inefficiencies, and common attack vectors. You'll receive a detailed report with remediation suggestions before deploying to mainnet.",
   },
   {
-    question: "What cryptocurrencies can I trade on the platform?",
-    answer: "Trade leading assets like BTC, ETH, SOL, and 100+ more pairs. We add new markets regularly based on demand and security reviews.",
+    question: "What node infrastructure options are available?",
+    answer: "Choose from shared RPC endpoints for development, dedicated nodes for production, or archive nodes for historical data access. All nodes feature 99.9% uptime SLA and automatic failover.",
   },
   {
-    question: "What fees are associated with trading and transfers?",
-    answer: "We offer transparent, tiered trading fees with discounts for higher volumes. Network transfer fees are passed through at cost with no hidden markups.",
+    question: "How are gas fees and transaction costs handled?",
+    answer: "Our gas optimization engine batches transactions when possible and suggests optimal gas prices. Enterprise plans include gas subsidies and meta-transaction support for gasless user experiences.",
   },
 ];
 
@@ -38,8 +38,8 @@ export default function FAQ() {
       <div className="max-w-4xl mx-auto pt-12 sm:pt-24 px-4 sm:px-6 pb-10 sm:pb-16">
         {/* Heading */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-neutral-100">Your Questions, Answered</h2>
-          <p className="mt-3 sm:mt-4 max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-neutral-400 leading-relaxed px-2">Get instant answers to most common questions about ChainVeil.</p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-neutral-100">Developer Questions, Answered</h2>
+          <p className="mt-3 sm:mt-4 max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-neutral-400 leading-relaxed px-2">Everything you need to know about building on ChainVeil infrastructure.</p>
         </div>
 
         {/* FAQ Accordion */}
