@@ -1,6 +1,33 @@
 "use client";
 
+import { useState } from "react";
+
+const faqData = [
+  {
+    question: "How do I create and verify my ChainVeil account?",
+    answer: "Creating a ChainVeil account is easy—just sign up with your email and a secure password. After that, confirm your email address, and you're ready to start exploring the platform. No lengthy forms or complicated steps involved.",
+  },
+  {
+    question: "How secure is ChainVeil with my digital assets?",
+    answer: "We use industry-standard encryption, multi-sig cold storage, and routine security audits. Your funds and data are protected by multiple layers of defense.",
+  },
+  {
+    question: "What cryptocurrencies can I trade on the platform?",
+    answer: "Trade leading assets like BTC, ETH, SOL, and 100+ more pairs. We add new markets regularly based on demand and security reviews.",
+  },
+  {
+    question: "What fees are associated with trading and transfers?",
+    answer: "We offer transparent, tiered trading fees with discounts for higher volumes. Network transfer fees are passed through at cost with no hidden markups.",
+  },
+];
+
 export default function FAQ() {
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+  const toggleItem = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
   return (
     <section className="relative">
       {/* Header accent line */}
@@ -17,110 +44,58 @@ export default function FAQ() {
 
         {/* FAQ Accordion */}
         <div className="space-y-3 sm:space-y-5">
-          {[
-            {
-              question: "How do I create and verify my ChainVeil account?",
-              answer: "Creating a ChainVeil account is easy—just sign up with your email and a secure password. After that, confirm your email address, and you're ready to start exploring the platform. No lengthy forms or complicated steps involved.",
-              defaultOpen: true,
-            },
-            {
-              question: "How secure is ChainVeil with my digital assets?",
-              answer: "We use industry-standard encryption, multi-sig cold storage, and routine security audits. Your funds and data are protected by multiple layers of defense.",
-              defaultOpen: false,
-            },
-            {
-              question: "What cryptocurrencies can I trade on the platform?",
-              answer: "Trade leading assets like BTC, ETH, SOL, and 100+ more pairs. We add new markets regularly based on demand and security reviews.",
-              defaultOpen: false,
-            },
-            {
-              question: "What fees are associated with trading and transfers?",
-              answer: "We offer transparent, tiered trading fees with discounts for higher volumes. Network transfer fees are passed through at cost with no hidden markups.",
-              defaultOpen: false,
-            },
-          ].map((item, index) => (
-            <div
-              key={index}
-              className={`faq-item rounded-2xl sm:rounded-3xl border border-white/10 ring-1 ring-white/5 overflow-hidden transition-all duration-300 ${
-                item.defaultOpen
-                  ? "faq-open"
-                  : "bg-neutral-900/40 hover:bg-white/5"
-              }`}
-              style={item.defaultOpen ? { background: "linear-gradient(to bottom, rgba(129, 214, 88, 0.15), rgba(129, 214, 88, 0.1), transparent)" } : {}}
-              data-open={item.defaultOpen ? "true" : "false"}
-            >
-              <button
-                type="button"
-                className="w-full text-left px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 flex items-start justify-between gap-3 sm:gap-6 hover:bg-white/5 transition-colors"
-                onClick={(e) => {
-                  const card = e.currentTarget.parentElement as HTMLElement;
-                  const panel = card?.querySelector('.faq-panel') as HTMLElement;
-                  const isOpen = card?.getAttribute('data-open') === 'true';
-                  const willOpen = !isOpen;
+          {faqData.map((item, index) => {
+            const isOpen = openIndex === index;
 
-                  // Close all other items
-                  document.querySelectorAll('.faq-item').forEach((otherCard) => {
-                    if (otherCard !== card) {
-                      otherCard.setAttribute('data-open', 'false');
-                      const otherPanel = otherCard.querySelector('.faq-panel') as HTMLElement;
-                      if (otherPanel) {
-                        otherPanel.style.maxHeight = '0';
-                        otherPanel.style.opacity = '0';
-                      }
-                      (otherCard as HTMLElement).style.background = '';
-                      otherCard.classList.add('bg-neutral-900/40');
-                    }
-                  });
-
-                  // Toggle current item
-                  card?.setAttribute('data-open', willOpen ? 'true' : 'false');
-                  if (panel) {
-                    if (willOpen) {
-                      panel.style.maxHeight = panel.scrollHeight + 'px';
-                      panel.style.opacity = '1';
-                      card.classList.remove('bg-neutral-900/40');
-                      card.style.background = 'linear-gradient(to bottom, rgba(129, 214, 88, 0.15), rgba(129, 214, 88, 0.1), transparent)';
-                    } else {
-                      panel.style.maxHeight = '0';
-                      panel.style.opacity = '0';
-                      card.classList.add('bg-neutral-900/40');
-                      card.style.background = '';
-                    }
-                  }
-                }}
-              >
-                <span className="text-sm sm:text-lg md:text-xl font-semibold tracking-tight text-neutral-100">{item.question}</span>
-                <span className="inline-flex items-center justify-center rounded-full bg-white/10 ring-1 ring-white/10 text-white h-6 w-6 sm:h-8 sm:w-8 shrink-0 transition-transform duration-200">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="h-4 w-4"
-                  >
-                    <path d="M5 12h14"></path>
-                    {!item.defaultOpen && <path d="M12 5v14"></path>}
-                  </svg>
-                </span>
-              </button>
+            return (
               <div
-                className="faq-panel transition-all duration-300 ease-in-out overflow-hidden"
-                style={{
-                  maxHeight: item.defaultOpen ? '200px' : '0',
-                  opacity: item.defaultOpen ? '1' : '0',
-                }}
+                key={index}
+                className={`faq-item rounded-2xl sm:rounded-3xl border overflow-hidden transition-all duration-300 ${
+                  isOpen
+                    ? "border-brand/30 ring-1 ring-brand/10"
+                    : "border-white/10 ring-1 ring-white/5 bg-neutral-900/40 hover:bg-white/5"
+                }`}
+                style={isOpen ? { background: "linear-gradient(180deg, rgba(129, 214, 88, 0.12) 0%, rgba(129, 214, 88, 0.06) 50%, transparent 100%)" } : {}}
               >
-                <div className="px-4 sm:px-6 md:px-8 pb-4 sm:pb-6 md:pb-8 pt-0">
-                  <p className="text-xs sm:text-sm md:text-base text-neutral-300 leading-relaxed">{item.answer}</p>
+                <button
+                  type="button"
+                  className="w-full text-left px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 flex items-start justify-between gap-3 sm:gap-6 hover:bg-white/5 transition-colors"
+                  onClick={() => toggleItem(index)}
+                  aria-expanded={isOpen}
+                >
+                  <span className="text-sm sm:text-lg md:text-xl font-semibold tracking-tight text-neutral-100">{item.question}</span>
+                  <span className="inline-flex items-center justify-center rounded-full bg-white/10 ring-1 ring-white/10 text-white h-6 w-6 sm:h-8 sm:w-8 shrink-0 transition-transform duration-200">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="h-4 w-4"
+                    >
+                      <path d="M5 12h14"></path>
+                      {!isOpen && <path d="M12 5v14"></path>}
+                    </svg>
+                  </span>
+                </button>
+                <div
+                  className="faq-panel transition-all duration-300 ease-in-out overflow-hidden"
+                  style={{
+                    maxHeight: isOpen ? '200px' : '0',
+                    opacity: isOpen ? '1' : '0',
+                  }}
+                >
+                  <div className="px-4 sm:px-6 md:px-8 pb-4 sm:pb-6 md:pb-8 pt-0">
+                    <p className="text-xs sm:text-sm md:text-base text-neutral-300 leading-relaxed">{item.answer}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

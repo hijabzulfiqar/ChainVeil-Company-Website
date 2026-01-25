@@ -3,7 +3,6 @@
 import {
   Search,
   Settings,
-  Settings2,
   TrendingUp,
   ArrowUpRight,
   Wallet,
@@ -325,49 +324,43 @@ export default function FeaturesCards() {
 
                   {/* Nodes */}
                   <div className="relative z-10 flex items-center justify-between">
-                    {/* Left Node - Our solution (Gear/Settings icon) */}
+                    {/* Left Node - Our solution */}
                     <div className="flex flex-col items-center gap-1 sm:gap-2">
                       <div className="relative w-16 h-16 sm:w-28 sm:h-28 rounded-lg sm:rounded-xl border border-white/10 bg-gradient-to-br from-neutral-800 to-neutral-900 ring-1 ring-white/10 shadow-lg shadow-black/50 flex items-center justify-center overflow-hidden">
-                        {/* Subtle glow behind icon */}
+                        {/* Subtle glow behind image */}
                         <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom right, rgba(129, 214, 88, 0.1), transparent, rgba(129, 214, 88, 0.1))" }} />
-                        {/* Gear icon with paper plane inside */}
-                        <div className="relative">
-                          <Settings2 className="w-8 h-8 sm:w-14 sm:h-14 text-neutral-400" strokeWidth={1.5} />
-                          <div className="absolute inset-0 flex items-center justify-center">
-                            <svg className="w-3 h-3 sm:w-6 sm:h-6" style={{ color: "#81D658" }} viewBox="0 0 24 24" fill="currentColor">
-                              <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
-                            </svg>
-                          </div>
+                        {/* Solution image */}
+                        <img
+                          src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=200&h=200&fit=crop&auto=format"
+                          alt="Our solution"
+                          className="w-full h-full object-cover opacity-80"
+                        />
+                        {/* Overlay icon */}
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/40">
+                          <svg className="w-6 h-6 sm:w-10 sm:h-10" style={{ color: "#81D658" }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a7.723 7.723 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.47 6.47 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                          </svg>
                         </div>
                       </div>
                       <span className="text-[10px] sm:text-xs text-neutral-300">Our solution</span>
                     </div>
 
-                    {/* Right Node - Your stack (Wallet icon) */}
+                    {/* Right Node - Your stack */}
                     <div className="flex flex-col items-center gap-1 sm:gap-2">
                       <div className="relative w-16 h-16 sm:w-28 sm:h-28 rounded-lg sm:rounded-xl border border-white/10 bg-gradient-to-br from-neutral-800 to-neutral-900 ring-1 ring-white/10 shadow-lg shadow-black/50 flex items-center justify-center overflow-hidden">
-                        {/* Subtle glow behind icon */}
+                        {/* Subtle glow behind image */}
                         <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom right, rgba(129, 214, 88, 0.1), transparent, rgba(129, 214, 88, 0.1))" }} />
-                        {/* Wallet icon */}
-                        <div className="relative">
-                          <svg className="w-10 h-10 sm:w-16 sm:h-16" viewBox="0 0 64 64" fill="none">
-                            {/* Wallet body */}
-                            <rect x="8" y="16" width="48" height="36" rx="4" fill="url(#walletGradient)" />
-                            {/* Wallet flap */}
-                            <path d="M8 20C8 17.7909 9.79086 16 12 16H52C54.2091 16 56 17.7909 56 20V24H8V20Z" fill="url(#flapGradient)" />
-                            {/* Card slot */}
-                            <rect x="36" y="30" width="16" height="12" rx="2" fill="#1a1a1a" />
-                            <circle cx="44" cy="36" r="3" fill="#81D658" />
-                            <defs>
-                              <linearGradient id="walletGradient" x1="8" y1="16" x2="56" y2="52" gradientUnits="userSpaceOnUse">
-                                <stop stopColor="#4a9e35" />
-                                <stop offset="1" stopColor="#5db344" />
-                              </linearGradient>
-                              <linearGradient id="flapGradient" x1="8" y1="16" x2="56" y2="24" gradientUnits="userSpaceOnUse">
-                                <stop stopColor="#81D658" />
-                                <stop offset="1" stopColor="#6BC248" />
-                              </linearGradient>
-                            </defs>
+                        {/* Stack image */}
+                        <img
+                          src="https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=200&h=200&fit=crop&auto=format"
+                          alt="Your stack"
+                          className="w-full h-full object-cover opacity-80"
+                        />
+                        {/* Overlay icon */}
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/40">
+                          <svg className="w-6 h-6 sm:w-10 sm:h-10" style={{ color: "#81D658" }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a2.25 2.25 0 0 0-2.25-2.25H15a3 3 0 1 1-6 0H5.25A2.25 2.25 0 0 0 3 12m18 0v6a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 9m18 0V6a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 6v3" />
                           </svg>
                         </div>
                       </div>
