@@ -8,15 +8,15 @@ export default function FAQ() {
         <div className="hidden sm:block absolute top-8 left-8 right-8 h-px bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent"></div>
       </div>
 
-      <div className="max-w-4xl mx-auto pt-24 px-6 pb-16">
+      <div className="max-w-4xl mx-auto pt-12 sm:pt-24 px-4 sm:px-6 pb-10 sm:pb-16">
         {/* Heading */}
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight text-neutral-100">Your Questions, Answered</h2>
-          <p className="mt-4 max-w-2xl mx-auto text-base sm:text-lg text-neutral-400 leading-relaxed">Get instant answers to most common questions about ChainVeil.</p>
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-neutral-100">Your Questions, Answered</h2>
+          <p className="mt-3 sm:mt-4 max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-neutral-400 leading-relaxed px-2">Get instant answers to most common questions about ChainVeil.</p>
         </div>
 
         {/* FAQ Accordion */}
-        <div className="space-y-5">
+        <div className="space-y-3 sm:space-y-5">
           {[
             {
               question: "How do I create and verify my ChainVeil account?",
@@ -41,7 +41,7 @@ export default function FAQ() {
           ].map((item, index) => (
             <div
               key={index}
-              className={`faq-item rounded-3xl border border-white/10 ring-1 ring-white/5 overflow-hidden transition-all duration-300 ${
+              className={`faq-item rounded-2xl sm:rounded-3xl border border-white/10 ring-1 ring-white/5 overflow-hidden transition-all duration-300 ${
                 item.defaultOpen
                   ? "bg-gradient-to-b from-emerald-500/15 via-emerald-500/10 to-green-500/0"
                   : "bg-neutral-900/40 hover:bg-white/5"
@@ -50,7 +50,7 @@ export default function FAQ() {
             >
               <button
                 type="button"
-                className="w-full text-left px-6 sm:px-8 py-5 sm:py-6 flex items-start justify-between gap-6 hover:bg-white/5 transition-colors"
+                className="w-full text-left px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 flex items-start justify-between gap-3 sm:gap-6 hover:bg-white/5 transition-colors"
                 onClick={(e) => {
                   const card = e.currentTarget.parentElement;
                   const panel = card?.querySelector('.faq-panel') as HTMLElement;
@@ -88,8 +88,8 @@ export default function FAQ() {
                   }
                 }}
               >
-                <span className="text-lg sm:text-xl font-semibold tracking-tight text-neutral-100">{item.question}</span>
-                <span className="inline-flex items-center justify-center rounded-full bg-white/10 ring-1 ring-white/10 text-white h-8 w-8 shrink-0 transition-transform duration-200">
+                <span className="text-sm sm:text-lg md:text-xl font-semibold tracking-tight text-neutral-100">{item.question}</span>
+                <span className="inline-flex items-center justify-center rounded-full bg-white/10 ring-1 ring-white/10 text-white h-6 w-6 sm:h-8 sm:w-8 shrink-0 transition-transform duration-200">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"
@@ -114,8 +114,8 @@ export default function FAQ() {
                   opacity: item.defaultOpen ? '1' : '0',
                 }}
               >
-                <div className="px-6 sm:px-8 pb-6 sm:pb-8 pt-0">
-                  <p className="text-sm sm:text-base text-neutral-300 leading-relaxed">{item.answer}</p>
+                <div className="px-4 sm:px-6 md:px-8 pb-4 sm:pb-6 md:pb-8 pt-0">
+                  <p className="text-xs sm:text-sm md:text-base text-neutral-300 leading-relaxed">{item.answer}</p>
                 </div>
               </div>
             </div>

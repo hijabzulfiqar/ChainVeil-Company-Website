@@ -12,18 +12,18 @@ import {
 export default function PowerfulFeatures() {
   return (
     <section className="relative">
-      <div className="max-w-7xl mx-auto px-6 pt-24 pb-16">
-        <div className="text-center mb-14">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.1]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-16 sm:pt-24 pb-12 sm:pb-16">
+        <div className="text-center mb-10 sm:mb-14">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.1]">
             <span className="text-neutral-200">Powerful features built for</span>
             <span className="block text-neutral-100">crypto confidence</span>
           </h2>
-          <p className="text-base sm:text-lg text-neutral-400 max-w-3xl mt-4 mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-neutral-400 max-w-3xl mt-3 sm:mt-4 mx-auto leading-relaxed px-2">
             Streamline your experience with tools designed to keep you secure, informed, and in control every step of the way.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {[
             { icon: Send, title: "Instant transfers", description: "Send and receive crypto in seconds, without delays or bottlenecks." },
             { icon: LineChart, title: "Risk analysis", description: "Stay ahead of the market with smart insights into potential risks." },
@@ -32,14 +32,14 @@ export default function PowerfulFeatures() {
             { icon: Gauge, title: "Autopilot mode", description: "Let smart algorithms manage your assets while you stay hands-off." },
             { icon: Shield, title: "Maximum security", description: "Protect your funds with top-tier encryption and multi-layer defences." },
           ].map((feature) => (
-            <div key={feature.title} className="rounded-2xl border border-white/5 bg-neutral-900/40 p-6 sm:p-7 transition hover:bg-white/5">
-              <div className="flex items-start gap-4">
-                <div className="inline-flex bg-neutral-800/60 w-10 h-10 ring-white/10 ring-1 rounded-xl items-center justify-center">
-                  <feature.icon className="h-5 w-5 text-neutral-300" />
+            <div key={feature.title} className="rounded-xl sm:rounded-2xl border border-white/5 bg-neutral-900/40 p-4 sm:p-6 md:p-7 transition hover:bg-white/5">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="inline-flex bg-neutral-800/60 w-9 h-9 sm:w-10 sm:h-10 ring-white/10 ring-1 rounded-lg sm:rounded-xl items-center justify-center shrink-0">
+                  <feature.icon className="h-4 w-4 sm:h-5 sm:w-5 text-neutral-300" />
                 </div>
                 <div>
-                  <h3 className="text-base sm:text-lg font-semibold text-neutral-100 tracking-tight">{feature.title}</h3>
-                  <p className="mt-2 text-sm text-neutral-400">{feature.description}</p>
+                  <h3 className="text-sm sm:text-base md:text-lg font-semibold text-neutral-100 tracking-tight">{feature.title}</h3>
+                  <p className="mt-1.5 sm:mt-2 text-xs sm:text-sm text-neutral-400">{feature.description}</p>
                 </div>
               </div>
             </div>

@@ -15,15 +15,15 @@ import {
 export default function Hero() {
   return (
     <section className="relative">
-      <div className="text-center max-w-4xl mx-auto pt-6 px-6 space-y-8">
-        <p className="text-sm text-neutral-400">Ship faster with data you trust</p>
-        <h1 className="mt-3 text-5xl sm:text-6xl font-semibold tracking-tight">
+      <div className="text-center max-w-4xl mx-auto pt-4 sm:pt-6 px-4 sm:px-6 space-y-6 sm:space-y-8">
+        <p className="text-xs sm:text-sm text-neutral-400">Ship faster with data you trust</p>
+        <h1 className="mt-2 sm:mt-3 text-3xl sm:text-5xl lg:text-6xl font-semibold tracking-tight">
           Take control of your
           <span className="block bg-clip-text text-transparent bg-gradient-to-br from-neutral-50 to-neutral-300">
             Product Analytics
           </span>
         </h1>
-        <p className="text-base text-neutral-400 max-w-2xl mt-5 mx-auto">
+        <p className="text-sm sm:text-base text-neutral-400 max-w-2xl mt-3 sm:mt-5 mx-auto px-2">
           Your funnels, cohorts, and retention streamlined. ChainVeil delivers real-time insights, low overhead, and next-level security.
         </p>
 
@@ -53,31 +53,31 @@ export default function Hero() {
       </div>
 
       {/* Dashboard */}
-      <div className="relative max-w-5xl mt-14 mx-auto px-6" style={{ perspective: "1000px" }}>
-        <div className="pointer-events-none relative mb-4">
+      <div className="relative max-w-5xl mt-8 sm:mt-14 mx-auto px-4 sm:px-6" style={{ perspective: "1000px" }}>
+        <div className="pointer-events-none relative mb-4 hidden sm:block">
           <div className="absolute -top-10 left-1/2 h-16 w-full max-w-4xl -translate-x-1/2 rounded-full bg-gradient-to-r from-transparent via-emerald-500/60 to-transparent blur-xl" />
           <div className="absolute -top-4 left-1/2 h-8 w-3/4 -translate-x-1/2 rounded-full bg-gradient-to-r from-transparent via-green-400/40 to-transparent blur-lg" />
         </div>
 
         <div className="relative transition-transform duration-800 ease-out">
-          <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-b from-black/40 via-transparent to-black/60 z-10" />
+          <div className="pointer-events-none absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-b from-black/40 via-transparent to-black/60 z-10" />
 
-          <div className="relative rounded-2xl border border-white/10 bg-gradient-to-b from-neutral-900/90 to-neutral-950/95 shadow-2xl shadow-black/60 ring-1 ring-white/5 backdrop-blur overflow-hidden">
+          <div className="relative rounded-xl sm:rounded-2xl border border-white/10 bg-gradient-to-b from-neutral-900/90 to-neutral-950/95 shadow-2xl shadow-black/60 ring-1 ring-white/5 backdrop-blur overflow-hidden">
             {/* Browser bar */}
-            <div className="flex items-center justify-between border-b border-white/10 px-4 py-2.5 bg-neutral-900/80">
-              <div className="flex items-center gap-2">
-                <span className="h-3 w-3 rounded-full bg-red-500/70" />
-                <span className="h-3 w-3 rounded-full bg-yellow-500/70" />
-                <span className="h-3 w-3 rounded-full bg-green-500/70" />
+            <div className="flex items-center justify-between border-b border-white/10 px-3 sm:px-4 py-2 sm:py-2.5 bg-neutral-900/80">
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <span className="h-2 w-2 sm:h-3 sm:w-3 rounded-full bg-red-500/70" />
+                <span className="h-2 w-2 sm:h-3 sm:w-3 rounded-full bg-yellow-500/70" />
+                <span className="h-2 w-2 sm:h-3 sm:w-3 rounded-full bg-green-500/70" />
               </div>
-              <div className="flex-1 px-3">
-                <div className="mx-auto max-w-xs rounded-full bg-neutral-800/60 px-3 py-1 text-center text-xs text-neutral-300 ring-1 ring-white/5">
+              <div className="flex-1 px-2 sm:px-3">
+                <div className="mx-auto max-w-[120px] sm:max-w-xs rounded-full bg-neutral-800/60 px-2 sm:px-3 py-0.5 sm:py-1 text-center text-[10px] sm:text-xs text-neutral-300 ring-1 ring-white/5">
                   chainveil.app
                 </div>
               </div>
-              <div className="flex items-center gap-2 text-neutral-400">
-                <Search className="h-3.5 w-3.5" />
-                <Settings className="h-3.5 w-3.5" />
+              <div className="flex items-center gap-1.5 sm:gap-2 text-neutral-400">
+                <Search className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
+                <Settings className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
               </div>
             </div>
 
@@ -120,28 +120,28 @@ export default function Hero() {
 
               {/* Main Content */}
               <main className="lg:col-span-4">
-                <div className="p-4">
-                  <div className="mb-4">
-                    <div className="flex items-center justify-between mb-3">
-                      <h2 className="text-base font-semibold tracking-tight">Dashboard Overview</h2>
-                      <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/10 px-2 py-0.5 text-xs font-medium text-emerald-300 ring-1 ring-emerald-500/20">
-                        <TrendingUp className="h-3 w-3" />
+                <div className="p-3 sm:p-4">
+                  <div className="mb-3 sm:mb-4">
+                    <div className="flex items-center justify-between mb-2 sm:mb-3">
+                      <h2 className="text-sm sm:text-base font-semibold tracking-tight">Dashboard Overview</h2>
+                      <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/10 px-1.5 sm:px-2 py-0.5 text-[10px] sm:text-xs font-medium text-emerald-300 ring-1 ring-emerald-500/20">
+                        <TrendingUp className="h-2.5 w-2.5 sm:h-3 sm:w-3" />
                         +12.4%
                       </span>
                     </div>
 
                     {/* Metric cards */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+                    <div className="grid grid-cols-2 gap-2 sm:gap-3 mb-3 sm:mb-4">
                       {[
                         { label: "Total Events", value: "2.4M", change: "+8.2%", positive: true },
                         { label: "Conversion", value: "4.2%", change: "+0.3%", positive: true },
                         { label: "Revenue", value: "$124.0K", change: "+15.1%", positive: true },
                         { label: "Users", value: "18.3K", change: "-2.1%", positive: false },
                       ].map((metric) => (
-                        <div key={metric.label} className="rounded-lg border border-white/10 bg-neutral-900/60 p-3">
-                          <div className="text-xs text-neutral-400">{metric.label}</div>
-                          <div className="text-lg font-semibold">{metric.value}</div>
-                          <div className={`text-xs ${metric.positive ? "text-emerald-400" : "text-rose-400"}`}>
+                        <div key={metric.label} className="rounded-lg border border-white/10 bg-neutral-900/60 p-2 sm:p-3">
+                          <div className="text-[10px] sm:text-xs text-neutral-400">{metric.label}</div>
+                          <div className="text-sm sm:text-lg font-semibold">{metric.value}</div>
+                          <div className={`text-[10px] sm:text-xs ${metric.positive ? "text-emerald-400" : "text-rose-400"}`}>
                             {metric.change}
                           </div>
                         </div>
@@ -150,19 +150,19 @@ export default function Hero() {
                   </div>
 
                   {/* Charts section */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                    <div className="rounded-xl border border-white/10 bg-neutral-900/60 p-4">
-                      <div className="flex items-center justify-between mb-3">
-                        <h3 className="text-sm font-semibold">Event Timeline</h3>
-                        <button className="text-neutral-400 hover:text-white">
+                  <div className="grid grid-cols-2 gap-2 sm:gap-4 mb-3 sm:mb-4">
+                    <div className="rounded-lg sm:rounded-xl border border-white/10 bg-neutral-900/60 p-2 sm:p-4">
+                      <div className="flex items-center justify-between mb-2 sm:mb-3">
+                        <h3 className="text-[10px] sm:text-sm font-semibold">Event Timeline</h3>
+                        <button className="text-neutral-400 hover:text-white hidden sm:block">
                           <MoreHorizontal className="h-4 w-4" />
                         </button>
                       </div>
-                      <div className="flex bg-gradient-to-b from-white/10 to-white/0 h-24 border-white/5 border rounded-lg p-2 items-end justify-between">
+                      <div className="flex bg-gradient-to-b from-white/10 to-white/0 h-16 sm:h-24 border-white/5 border rounded-lg p-1.5 sm:p-2 items-end justify-between">
                         {[40, 60, 80, 45, 75, 90, 70].map((height, i) => (
                           <div
                             key={i}
-                            className={`w-2 rounded-t transition-all duration-1000 ${
+                            className={`w-1.5 sm:w-2 rounded-t transition-all duration-1000 ${
                               i >= 5
                                 ? "bg-gradient-to-t from-green-500 to-green-400"
                                 : "bg-gradient-to-t from-emerald-500 to-emerald-400"
@@ -173,57 +173,57 @@ export default function Hero() {
                       </div>
                     </div>
 
-                    <div className="rounded-xl border border-white/10 bg-neutral-900/60 p-4">
-                      <div className="flex items-center justify-between mb-3">
-                        <h3 className="text-sm font-semibold">Top Sources</h3>
-                        <button className="text-neutral-400 hover:text-white">
+                    <div className="rounded-lg sm:rounded-xl border border-white/10 bg-neutral-900/60 p-2 sm:p-4">
+                      <div className="flex items-center justify-between mb-2 sm:mb-3">
+                        <h3 className="text-[10px] sm:text-sm font-semibold">Top Sources</h3>
+                        <button className="text-neutral-400 hover:text-white hidden sm:block">
                           <MoreHorizontal className="h-4 w-4" />
                         </button>
                       </div>
-                      <div className="h-24 flex items-center justify-center">
+                      <div className="h-16 sm:h-24 flex items-center justify-center">
                         <div className="relative">
                           <div
-                            className="w-16 h-16 rounded-full border-8 border-emerald-500/30 border-t-emerald-500 border-r-green-500 border-b-teal-500"
+                            className="w-10 h-10 sm:w-16 sm:h-16 rounded-full border-4 sm:border-8 border-emerald-500/30 border-t-emerald-500 border-r-green-500 border-b-teal-500"
                             style={{ transform: "rotate(240deg)" }}
                           />
-                          <div className="absolute inset-0 flex items-center justify-center text-xs font-semibold">67%</div>
+                          <div className="absolute inset-0 flex items-center justify-center text-[10px] sm:text-xs font-semibold">67%</div>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  {/* Table */}
-                  <div className="rounded-xl border border-white/10 bg-neutral-900/60 overflow-hidden">
-                    <div className="flex items-center justify-between px-4 py-3 border-b border-white/10">
-                      <h4 className="text-sm font-semibold">Recent Events</h4>
-                      <a href="#" className="text-xs text-neutral-300 hover:text-white">View all</a>
+                  {/* Table - Hidden on very small screens */}
+                  <div className="hidden sm:block rounded-lg sm:rounded-xl border border-white/10 bg-neutral-900/60 overflow-hidden">
+                    <div className="flex items-center justify-between px-3 sm:px-4 py-2 sm:py-3 border-b border-white/10">
+                      <h4 className="text-xs sm:text-sm font-semibold">Recent Events</h4>
+                      <a href="#" className="text-[10px] sm:text-xs text-neutral-300 hover:text-white">View all</a>
                     </div>
                     <div className="overflow-x-auto">
                       <table className="w-full text-left">
-                        <thead className="text-xs text-neutral-400">
+                        <thead className="text-[10px] sm:text-xs text-neutral-400">
                           <tr className="border-b border-white/10">
-                            <th className="px-4 py-2 font-medium">Event</th>
-                            <th className="px-4 py-2 font-medium">User</th>
-                            <th className="px-4 py-2 font-medium">Count</th>
-                            <th className="px-4 py-2 font-medium">Time</th>
+                            <th className="px-3 sm:px-4 py-1.5 sm:py-2 font-medium">Event</th>
+                            <th className="px-3 sm:px-4 py-1.5 sm:py-2 font-medium hidden md:table-cell">User</th>
+                            <th className="px-3 sm:px-4 py-1.5 sm:py-2 font-medium">Count</th>
+                            <th className="px-3 sm:px-4 py-1.5 sm:py-2 font-medium">Time</th>
                           </tr>
                         </thead>
-                        <tbody className="divide-y divide-white/10 text-xs">
+                        <tbody className="divide-y divide-white/10 text-[10px] sm:text-xs">
                           {[
                             { event: "signup_completed", color: "bg-emerald-400", user: "user_1204", count: "1.2K", time: "2m ago" },
                             { event: "page_view", color: "bg-green-400", user: "user_8847", count: "892", time: "5m ago" },
                             { event: "purchase", color: "bg-teal-400", user: "user_5521", count: "456", time: "8m ago" },
                           ].map((row) => (
                             <tr key={row.event} className="hover:bg-white/5">
-                              <td className="px-4 py-2">
-                                <div className="flex items-center gap-2">
-                                  <span className={`w-2 h-2 rounded-full ${row.color}`} />
-                                  {row.event}
+                              <td className="px-3 sm:px-4 py-1.5 sm:py-2">
+                                <div className="flex items-center gap-1.5 sm:gap-2">
+                                  <span className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full ${row.color}`} />
+                                  <span className="truncate max-w-[80px] sm:max-w-none">{row.event}</span>
                                 </div>
                               </td>
-                              <td className="px-4 py-2 text-neutral-300">{row.user}</td>
-                              <td className="px-4 py-2">{row.count}</td>
-                              <td className="px-4 py-2 text-neutral-400">{row.time}</td>
+                              <td className="px-3 sm:px-4 py-1.5 sm:py-2 text-neutral-300 hidden md:table-cell">{row.user}</td>
+                              <td className="px-3 sm:px-4 py-1.5 sm:py-2">{row.count}</td>
+                              <td className="px-3 sm:px-4 py-1.5 sm:py-2 text-neutral-400">{row.time}</td>
                             </tr>
                           ))}
                         </tbody>

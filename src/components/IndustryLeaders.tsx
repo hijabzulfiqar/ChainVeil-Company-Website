@@ -5,9 +5,9 @@ import { Star, ArrowUpRight } from "lucide-react";
 export default function IndustryLeaders() {
   return (
     <section className="relative" id="testimonials">
-      <div className="max-w-max mx-auto px-6 lg:px-24 py-16">
+      <div className="max-w-max mx-auto px-4 sm:px-6 lg:px-24 py-12 sm:py-16">
         <div
-          className="relative overflow-visible bg-neutral-900/50 border border-white/10 ring-1 ring-white/5 rounded-3xl"
+          className="relative overflow-visible bg-neutral-900/50 border border-white/10 ring-1 ring-white/5 rounded-2xl sm:rounded-3xl"
           style={{
             backgroundImage: "radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px)",
             backgroundSize: "18px 18px",
@@ -19,15 +19,15 @@ export default function IndustryLeaders() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2">
             {/* Left: stacked review cards */}
-            <div className="relative p-10 sm:p-12 flex items-center justify-center">
-              <div className="relative w-full h-96 max-w-7xl">
-                <div className="testimonial-container relative flex justify-center items-center h-full">
+            <div className="relative p-6 sm:p-10 md:p-12 flex items-center justify-center">
+              <div className="relative w-full h-72 sm:h-96 max-w-7xl">
+                <div className="testimonial-container relative flex justify-center items-center h-full scale-75 sm:scale-100">
                   {/* Card 1 - Back */}
                   <div
                     className="testimonial-glass absolute"
                     style={{
-                      width: "300px",
-                      height: "300px",
+                      width: "260px",
+                      height: "260px",
                       background: "linear-gradient(rgba(255,255,255,0.1), transparent)",
                       border: "1px solid rgba(255, 255, 255, 0.1)",
                       boxShadow: "0 25px 25px rgba(0, 0, 0, 0.25)",
@@ -70,8 +70,8 @@ export default function IndustryLeaders() {
                   <div
                     className="testimonial-glass absolute"
                     style={{
-                      width: "300px",
-                      height: "300px",
+                      width: "260px",
+                      height: "260px",
                       background: "linear-gradient(rgba(255,255,255,0.08), transparent)",
                       border: "1px solid rgba(255, 255, 255, 0.1)",
                       boxShadow: "0 25px 25px rgba(0, 0, 0, 0.25)",
@@ -158,22 +158,22 @@ export default function IndustryLeaders() {
             </div>
 
             {/* Right: headline and CTA */}
-            <div className="p-10 sm:p-12 lg:p-14 flex flex-col justify-center">
-              <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight text-neutral-100 leading-[1.1]">
+            <div className="p-6 sm:p-10 lg:p-14 flex flex-col justify-center text-center lg:text-left">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-neutral-100 leading-[1.1]">
                 Trusted by Industry Leaders
               </h2>
-              <p className="mt-6 max-w-xl text-base sm:text-lg text-neutral-400 leading-relaxed">
+              <p className="mt-4 sm:mt-6 max-w-xl text-sm sm:text-base lg:text-lg text-neutral-400 leading-relaxed mx-auto lg:mx-0">
                 Join 50+ satisfied clients who&apos;ve transformed their digital presence with exceptional design and development.
               </p>
 
-              <div className="mt-10">
+              <div className="mt-6 sm:mt-10 flex justify-center lg:justify-start">
                 <a
                   href="#"
-                  className="group inline-flex items-center gap-3 hover:bg-white/10 transition text-sm font-semibold text-white bg-white/5 ring-1 ring-white/10 rounded-full py-2.5 px-4 backdrop-blur-lg"
+                  className="group inline-flex items-center gap-2 sm:gap-3 hover:bg-white/10 transition text-xs sm:text-sm font-semibold text-white bg-white/5 ring-1 ring-white/10 rounded-full py-2 sm:py-2.5 px-3 sm:px-4 backdrop-blur-lg"
                 >
                   View all reviews
-                  <span className="inline-flex items-center justify-center group-hover:translate-x-0.5 transition text-neutral-900 bg-white w-7 h-7 rounded-full">
-                    <ArrowUpRight className="w-4 h-4" />
+                  <span className="inline-flex items-center justify-center group-hover:translate-x-0.5 transition text-neutral-900 bg-white w-6 h-6 sm:w-7 sm:h-7 rounded-full">
+                    <ArrowUpRight className="w-3 h-3 sm:w-4 sm:h-4" />
                   </span>
                 </a>
               </div>
