@@ -1,0 +1,12 @@
+export { default as Header } from './Header';
+export { default as Hero } from './Hero';
+export { default as ChainLogos } from './ChainLogos';
+export { default as FeaturesCards } from './FeaturesCards';
+export { default as PowerfulFeatures } from './PowerfulFeatures';
+export { default as MarketMoves } from './MarketMoves';
+export { default as Steps } from './Steps';
+export { default as IndustryLeaders } from './IndustryLeaders';
+export { default as Pricing } from './Pricing';
+export { default as FAQ } from './FAQ';
+export { default as CTA } from './CTA';
+export { default as Footer } from './Footer';
