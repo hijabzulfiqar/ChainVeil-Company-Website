@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Linkedin, Twitter } from "lucide-react";
 
 export default function Footer() {
@@ -14,7 +15,7 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8">
           {/* Brand + blurb */}
           <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
-            <a href="#" className="inline-flex items-center gap-2">
+            <Link href="/" className="inline-flex items-center gap-2">
               <img
                 src="/chainveil.png"
                 alt="ChainVeil"
@@ -26,7 +27,7 @@ export default function Footer() {
               >
                 ChainVeil
               </span>
-            </a>
+            </Link>
             <span className="hidden sm:block h-6 w-px bg-white/10"></span>
             <p className="text-xs sm:text-sm text-neutral-400 text-center sm:text-left">
               Take control of your crypto investments.
@@ -35,36 +36,36 @@ export default function Footer() {
 
           {/* Navigation */}
           <nav className="flex items-center gap-4 sm:gap-6 flex-wrap justify-center">
-            <a
-              href="#"
+            <Link
+              href="/"
               className="text-xs sm:text-sm text-neutral-400 hover:text-white transition"
             >
               Home
-            </a>
-            <a
-              href="#about"
+            </Link>
+            <Link
+              href="/#about"
               className="text-xs sm:text-sm text-neutral-400 hover:text-white transition"
             >
               About Us
-            </a>
-            <a
-              href="#services"
+            </Link>
+            <Link
+              href="/services"
               className="text-xs sm:text-sm text-neutral-400 hover:text-white transition"
             >
               Services
-            </a>
-            <a
-              href="#contact"
+            </Link>
+            <Link
+              href="/#contact"
               className="text-xs sm:text-sm text-neutral-400 hover:text-white transition"
             >
               Contact Us
-            </a>
-            <a
-              href="#blog"
+            </Link>
+            <Link
+              href="/blog"
               className="text-xs sm:text-sm text-neutral-400 hover:text-white transition"
             >
               Blog
-            </a>
+            </Link>
           </nav>
 
           {/* Socials */}
