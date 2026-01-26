@@ -21,11 +21,11 @@ export default function CTA() {
             {/* Left: Headline + copy + CTA */}
             <div className="text-center lg:text-left">
               <h2 className="text-3xl sm:text-4xl md:text-5xl leading-[1.1] font-semibold text-neutral-100 tracking-tight">
-                Build the future of
-                <span className="block text-neutral-100">decentralized apps</span>
+                Build the future with
+                <span className="block text-neutral-100">AI & blockchain</span>
               </h2>
               <p className="text-sm sm:text-base md:text-lg leading-relaxed text-neutral-400 max-w-xl mt-3 sm:mt-5 mx-auto lg:mx-0">
-                Join thousands of developers building on ChainVeil infrastructure. Deploy your first smart contract and experience the power of Web3.
+                Join thousands of developers building intelligent dApps on ChainVeil infrastructure. Deploy AI-powered smart contracts and experience the future of Web3.
               </p>
 
               <div className="mt-5 sm:mt-8 flex justify-center lg:justify-start">
@@ -55,7 +55,7 @@ export default function CTA() {
 
                 {/* Quote */}
                 <p className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg text-neutral-300 leading-relaxed text-center lg:text-left">
-                  &ldquo;ChainVeil&apos;s infrastructure cut our deployment time by 80%. The smart contract auditing alone has saved us from critical vulnerabilities in production.&rdquo;
+                  &ldquo;ChainVeil&apos;s AI-powered infrastructure cut our deployment time by 80%. The ML-driven contract auditing has saved us from critical vulnerabilities in production.&rdquo;
                 </p>
 
                 {/* Author */}

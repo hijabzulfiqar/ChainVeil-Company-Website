@@ -21,11 +21,11 @@ export default function MarketMoves() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 py-16 sm:py-24 items-center">
           <div className="text-center lg:text-left">
             <h3 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
-              <span className="block text-neutral-300">Monitor on-chain activity</span>
+              <span className="block text-neutral-300">AI-powered market intelligence</span>
               <span className="block text-neutral-100">across all networks</span>
             </h3>
             <p className="mt-3 sm:mt-4 max-w-xl text-xs sm:text-sm md:text-base text-neutral-400 leading-relaxed mx-auto lg:mx-0">
-              Track token movements, gas prices, and protocol metrics across multiple chains. Real-time indexing keeps you ahead of the market.
+              Track token movements with AI predictions, optimize gas with ML models, and get intelligent protocol insights. Our AI keeps you ahead of the market.
             </p>
             <div className="mt-5 sm:mt-6 flex justify-center lg:justify-start">
               <a href="#" className="flex justify-center gap-2 items-center font-semibold relative z-10 overflow-hidden group text-sm sm:text-lg text-neutral-900 bg-gray-50 max-w-fit border-gray-50 border-2 rounded-full py-1.5 sm:py-2 px-3 sm:px-4 shadow-xl backdrop-blur-md hover:bg-brand hover:text-white hover:border-brand transition-all duration-300">
@@ -38,9 +38,9 @@ export default function MarketMoves() {
           {/* Watchlist */}
           <div className="rounded-2xl sm:rounded-3xl border border-white/5 bg-neutral-900/50 p-4 sm:p-6 relative overflow-hidden">
             <div className="flex items-center justify-between mb-3 sm:mb-4">
-              <div className="text-xs sm:text-sm font-medium text-neutral-300">Network Monitor</div>
+              <div className="text-xs sm:text-sm font-medium text-neutral-300">AI Network Monitor</div>
               <div className="inline-flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs text-neutral-400">
-                <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-brand animate-pulse" /> Live
+                <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-brand animate-pulse" /> AI Live
               </div>
             </div>
 

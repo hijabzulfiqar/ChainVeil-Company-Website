@@ -5,6 +5,7 @@ import FeaturesCards from "@/components/FeaturesCards";
 import PowerfulFeatures from "@/components/PowerfulFeatures";
 import MarketMoves from "@/components/MarketMoves";
 import Steps from "@/components/Steps";
+import Members from "@/components/Members";
 import IndustryLeaders from "@/components/IndustryLeaders";
 // import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
@@ -21,6 +22,7 @@ export default function Home() {
       <PowerfulFeatures />
       <MarketMoves />
       <Steps />
+      <Members />
       <IndustryLeaders />
       <FAQ />
       <CTA />

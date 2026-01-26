@@ -4,20 +4,20 @@ import { useState } from "react";
 
 const faqData = [
   {
+    question: "How does ChainVeil combine AI and blockchain?",
+    answer: "ChainVeil integrates advanced machine learning models with blockchain infrastructure. Our AI analyzes smart contracts, predicts gas prices, detects threats in real-time, and provides intelligent insights across all supported networks.",
+  },
+  {
+    question: "What AI-powered features are available?",
+    answer: "Our platform offers ML-driven smart contract auditing, AI-powered gas optimization, predictive analytics for DeFi protocols, automated threat detection, and intelligent transaction routing across 50+ blockchain networks.",
+  },
+  {
+    question: "How does the AI smart contract audit work?",
+    answer: "Our deep learning security scanner analyzes your Solidity code for vulnerabilities, gas inefficiencies, and attack vectors that traditional audits miss. You'll receive AI-generated remediation suggestions before mainnet deployment.",
+  },
+  {
     question: "What blockchain networks does ChainVeil support?",
-    answer: "ChainVeil supports all major EVM-compatible networks including Ethereum, Polygon, Arbitrum, Optimism, and BSC. We also provide cross-chain bridging to Solana, Avalanche, and 20+ other networks with sub-second finality.",
-  },
-  {
-    question: "How does the smart contract audit process work?",
-    answer: "Our AI-powered security scanner analyzes your Solidity code for vulnerabilities, gas inefficiencies, and common attack vectors. You'll receive a detailed report with remediation suggestions before deploying to mainnet.",
-  },
-  {
-    question: "What node infrastructure options are available?",
-    answer: "Choose from shared RPC endpoints for development, dedicated nodes for production, or archive nodes for historical data access. All nodes feature 99.9% uptime SLA and automatic failover.",
-  },
-  {
-    question: "How are gas fees and transaction costs handled?",
-    answer: "Our gas optimization engine batches transactions when possible and suggests optimal gas prices. Enterprise plans include gas subsidies and meta-transaction support for gasless user experiences.",
+    answer: "ChainVeil supports all major EVM-compatible networks including Ethereum, Polygon, Arbitrum, Optimism, and BSC. Our AI-optimized bridges provide cross-chain connectivity to Solana, Avalanche, and 20+ other networks.",
   },
 ];
 
@@ -38,8 +38,8 @@ export default function FAQ() {
       <div className="max-w-4xl mx-auto pt-12 sm:pt-24 px-4 sm:px-6 pb-10 sm:pb-16">
         {/* Heading */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-neutral-100">Developer Questions, Answered</h2>
-          <p className="mt-3 sm:mt-4 max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-neutral-400 leading-relaxed px-2">Everything you need to know about building on ChainVeil infrastructure.</p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-neutral-100">AI & Blockchain Questions, Answered</h2>
+          <p className="mt-3 sm:mt-4 max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-neutral-400 leading-relaxed px-2">Everything you need to know about building intelligent dApps on ChainVeil infrastructure.</p>
         </div>
 
         {/* FAQ Accordion */}

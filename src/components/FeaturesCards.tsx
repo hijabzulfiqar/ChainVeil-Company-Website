@@ -17,10 +17,10 @@ export default function FeaturesCards() {
         <div className="text-center mb-10 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] font-semibold tracking-tight">
             <span className="text-neutral-200">Powering the next generation of</span>
-            <span className="block text-neutral-100">blockchain infrastructure</span>
+            <span className="block text-neutral-100">AI & blockchain infrastructure</span>
           </h2>
           <p className="mt-3 sm:mt-4 max-w-3xl mx-auto text-sm sm:text-base md:text-lg text-neutral-400 leading-relaxed px-2">
-            Enterprise-grade distributed ledger solutions built on cutting-edge cryptographic protocols, setting a new standard for decentralized applications.
+            Enterprise-grade AI and distributed ledger solutions built on cutting-edge machine learning and cryptographic protocols, setting a new standard for intelligent decentralized applications.
           </p>
         </div>
 
@@ -270,10 +270,10 @@ export default function FeaturesCards() {
               </div>
 
               <h3 className="text-base sm:text-lg font-semibold tracking-tight text-neutral-100 mb-2">
-                On-chain analytics engine
+                AI-driven on-chain analytics
               </h3>
               <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed mb-4 sm:mb-6">
-                Track wallet activity, monitor token flows, and analyze DeFi protocols in real-time. Powerful on-chain data indexing with machine learning-powered insights.
+                Track wallet activity, monitor token flows, and analyze DeFi protocols with AI-powered predictions. Machine learning models provide real-time insights and anomaly detection.
               </p>
 
               <div className="relative overflow-visible bg-black/40 border-white/10 border rounded-xl sm:rounded-2xl p-3 sm:p-4 pb-6 sm:pb-8">
@@ -284,8 +284,8 @@ export default function FeaturesCards() {
                   }}
                 />
 
-                <h3 className="text-base sm:text-lg tracking-tight font-semibold mb-2">Blockchain Data Pipeline</h3>
-                <p className="text-xs sm:text-sm text-gray-300 mb-3 sm:mb-4">Real-time indexing and querying for EVM-compatible chains.</p>
+                <h3 className="text-base sm:text-lg tracking-tight font-semibold mb-2">AI + Blockchain Data Pipeline</h3>
+                <p className="text-xs sm:text-sm text-gray-300 mb-3 sm:mb-4">AI-enhanced indexing and predictive querying for EVM-compatible chains.</p>
 
                 <div className="relative rounded-lg sm:rounded-xl bg-neutral-900/60 border border-white/10 ring-1 ring-white/5 overflow-hidden p-3 sm:p-6">
                   {/* Animated Connectors */}
@@ -363,8 +363,8 @@ export default function FeaturesCards() {
                     <TrendingUp className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-brand" />
                     See Growth
                   </span>
+                  <span className="text-[9px] sm:text-[10px] px-1.5 sm:px-2 py-0.5 rounded bg-black/40 border border-white/10 text-gray-300">AI Powered</span>
                   <span className="text-[9px] sm:text-[10px] px-1.5 sm:px-2 py-0.5 rounded bg-black/40 border border-white/10 text-gray-300">Multi-chain</span>
-                  <span className="text-[9px] sm:text-[10px] px-1.5 sm:px-2 py-0.5 rounded bg-black/40 border border-white/10 text-gray-300">Last 24h</span>
                 </div>
               </div>
             </div>

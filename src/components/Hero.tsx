@@ -16,15 +16,15 @@ export default function Hero() {
   return (
     <section className="relative">
       <div className="text-center max-w-4xl mx-auto pt-4 sm:pt-6 px-4 sm:px-6 space-y-6 sm:space-y-8">
-        <p className="text-xs sm:text-sm text-neutral-400">Enterprise-grade blockchain infrastructure</p>
+        <p className="text-xs sm:text-sm text-neutral-400">Enterprise-grade AI & Blockchain infrastructure</p>
         <h1 className="mt-2 sm:mt-3 text-3xl sm:text-5xl lg:text-6xl font-semibold tracking-tight">
-          Building the future of
+          Building the future with
           <span className="block bg-clip-text text-transparent bg-gradient-to-br from-neutral-50 to-neutral-300">
-            Decentralized Technology
+            AI & Blockchain Technology
           </span>
         </h1>
         <p className="text-sm sm:text-base text-neutral-400 max-w-2xl mt-3 sm:mt-5 mx-auto px-2">
-          Harness the power of distributed ledger technology. ChainVeil delivers secure smart contracts, seamless DeFi integration, and enterprise blockchain solutions.
+          Harness the power of artificial intelligence and distributed ledger technology. ChainVeil delivers AI-powered smart contract audits, intelligent DeFi analytics, and enterprise blockchain solutions.
         </p>
 
         <div>
@@ -109,7 +109,7 @@ export default function Hero() {
                   </a>
                   <a className="flex items-center gap-2 rounded-md px-2 py-1.5 text-xs text-neutral-300 hover:bg-white/5 hover:text-white transition" href="#">
                     <Bell className="h-3.5 w-3.5" />
-                    Alerts
+                    AI Insights
                   </a>
                   <a className="flex items-center gap-2 rounded-md px-2 py-1.5 text-xs text-neutral-300 hover:bg-white/5 hover:text-white transition" href="#">
                     <Settings2 className="h-3.5 w-3.5" />
@@ -123,7 +123,7 @@ export default function Hero() {
                 <div className="p-3 sm:p-4">
                   <div className="mb-3 sm:mb-4">
                     <div className="flex items-center justify-between mb-2 sm:mb-3">
-                      <h2 className="text-sm sm:text-base font-semibold tracking-tight">Blockchain Overview</h2>
+                      <h2 className="text-sm sm:text-base font-semibold tracking-tight">AI & Blockchain Overview</h2>
                       <span className="inline-flex items-center gap-1 rounded-full px-1.5 sm:px-2 py-0.5 text-[10px] sm:text-xs font-medium ring-1" style={{ backgroundColor: "rgba(129, 214, 88, 0.1)", color: "#81D658", borderColor: "rgba(129, 214, 88, 0.2)" }}>
                         <TrendingUp className="h-2.5 w-2.5 sm:h-3 sm:w-3" />
                         +12.4%
@@ -134,9 +134,9 @@ export default function Hero() {
                     <div className="grid grid-cols-2 gap-2 sm:gap-3 mb-3 sm:mb-4">
                       {[
                         { label: "Transactions", value: "2.4M", change: "+8.2%", positive: true },
-                        { label: "Gas Saved", value: "42.8%", change: "+0.3%", positive: true },
+                        { label: "AI Predictions", value: "98.4%", change: "+1.2%", positive: true },
                         { label: "TVL", value: "$124.0M", change: "+15.1%", positive: true },
-                        { label: "Active Nodes", value: "18.3K", change: "-2.1%", positive: false },
+                        { label: "ML Models", value: "847", change: "+12.3%", positive: true },
                       ].map((metric) => (
                         <div key={metric.label} className="rounded-lg border border-white/10 bg-neutral-900/60 p-2 sm:p-3">
                           <div className="text-[10px] sm:text-xs text-neutral-400">{metric.label}</div>

@@ -47,7 +47,7 @@ export default function IndustryLeaders() {
                           </svg>
                         </div>
                         <p className="text-sm leading-relaxed text-neutral-900 mb-4">
-                          &ldquo;ChainVeil&apos;s cross-chain infrastructure reduced our bridge development time from months to days. Incredible tooling.&rdquo;
+                          &ldquo;ChainVeil&apos;s AI-optimized cross-chain infrastructure reduced our bridge development time from months to days. The ML routing is incredible.&rdquo;
                         </p>
                         <div className="pt-3 border-t border-neutral-200 flex items-center justify-between">
                           <div className="flex items-center gap-2">
@@ -91,7 +91,7 @@ export default function IndustryLeaders() {
                           </svg>
                         </div>
                         <p className="text-sm leading-relaxed text-neutral-900 mb-4">
-                          &ldquo;The on-chain analytics engine gives us real-time insights into protocol health that we couldn&apos;t get anywhere else.&rdquo;
+                          &ldquo;The AI-powered analytics engine gives us predictive insights into protocol health that we couldn&apos;t get anywhere else.&rdquo;
                         </p>
                         <div className="pt-3 border-t border-neutral-200 flex items-center justify-between">
                           <div className="flex items-center gap-2">
@@ -135,7 +135,7 @@ export default function IndustryLeaders() {
                           </svg>
                         </div>
                         <p className="text-sm leading-relaxed text-neutral-900 mb-4">
-                          &ldquo;The smart contract audit caught vulnerabilities our own team missed. ChainVeil is now essential to our deployment pipeline.&rdquo;
+                          &ldquo;The ML-driven smart contract audit caught vulnerabilities our own team missed. ChainVeil&apos;s AI is now essential to our pipeline.&rdquo;
                         </p>
                         <div className="pt-3 border-t border-neutral-200 flex items-center justify-between">
                           <div className="flex items-center gap-2">
@@ -160,10 +160,10 @@ export default function IndustryLeaders() {
             {/* Right: headline and CTA */}
             <div className="p-6 sm:p-10 lg:p-14 flex flex-col justify-center text-center lg:text-left">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-tight text-neutral-100 leading-[1.1]">
-                Trusted by Web3 Builders
+                Trusted by AI & Web3 Builders
               </h2>
               <p className="mt-4 sm:mt-6 max-w-xl text-sm sm:text-base lg:text-lg text-neutral-400 leading-relaxed mx-auto lg:mx-0">
-                Join 500+ blockchain teams who&apos;ve accelerated their development with ChainVeil&apos;s enterprise infrastructure.
+                Join 500+ teams who&apos;ve accelerated their AI and blockchain development with ChainVeil&apos;s intelligent infrastructure.
               </p>
 
               <div className="mt-6 sm:mt-10 flex justify-center lg:justify-start">
