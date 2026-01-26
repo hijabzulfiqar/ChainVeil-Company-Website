@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { ArrowRight, Clock, User, Tag, Brain } from "lucide-react";
+import { ArrowRight, Clock, User, Tag } from "lucide-react";
 
 const allBlogPosts = [
   // AI & Security
