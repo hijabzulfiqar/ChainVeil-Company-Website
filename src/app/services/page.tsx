@@ -84,38 +84,23 @@ export default function ServicesPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative pt-16 sm:pt-20 md:pt-28 pb-12 sm:pb-16 md:pb-24">
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div
-            className="absolute top-0 left-1/2 -translate-x-1/2 w-[300px] sm:w-[400px] md:w-[600px] h-[200px] sm:h-[300px] md:h-[400px] rounded-full blur-3xl opacity-20"
-            style={{
-              background:
-                "radial-gradient(circle, rgba(129, 214, 88, 0.4), transparent 70%)",
-            }}
-          />
-        </div>
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center relative">
-          <span className="inline-flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs md:text-sm font-medium text-brand bg-brand/10 ring-1 ring-brand/20 rounded-full px-2.5 sm:px-3 py-1 mb-4 sm:mb-6">
-            <Brain className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
-            AI-Powered Services
-          </span>
-          <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-neutral-100 leading-[1.15] px-2">
-            <span className="text-neutral-200">Enterprise-grade AI &</span>
-            <span className="block text-neutral-100">
-              blockchain infrastructure
+      <section className="relative">
+        <div className="text-center max-w-4xl mx-auto pt-4 sm:pt-6 px-4 sm:px-6 space-y-6 sm:space-y-8">
+          <p className="text-xs sm:text-sm text-neutral-400">AI-Powered Services</p>
+          <h1 className="mt-2 sm:mt-3 text-3xl sm:text-5xl lg:text-6xl font-semibold tracking-tight">
+            Enterprise-grade AI &
+            <span className="block bg-clip-text text-transparent bg-gradient-to-br from-neutral-50 to-neutral-300">
+              Blockchain Infrastructure
             </span>
           </h1>
-          <p className="mt-3 sm:mt-4 md:mt-6 max-w-2xl mx-auto text-xs sm:text-sm md:text-base lg:text-lg text-neutral-400 leading-relaxed px-2">
-            From smart contract auditing to cross-chain infrastructure, we
-            provide cutting-edge tools powered by machine learning and
-            distributed systems.
+          <p className="text-sm sm:text-base text-neutral-400 max-w-2xl mt-3 sm:mt-5 mx-auto px-2">
+            From smart contract auditing to cross-chain infrastructure, we provide cutting-edge tools powered by machine learning and distributed systems.
           </p>
         </div>
       </section>
 
       {/* Stats Bar */}
-      <section className="relative pb-12 sm:pb-16 md:pb-24">
+      <section className="relative pt-12 sm:pt-16 pb-12 sm:pb-16 md:pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div
             className="relative overflow-hidden rounded-xl sm:rounded-2xl md:rounded-3xl border border-white/10 ring-1 ring-white/5 p-3 sm:p-4 md:p-6"
