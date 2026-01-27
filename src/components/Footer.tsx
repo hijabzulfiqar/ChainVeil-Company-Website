@@ -43,7 +43,7 @@ export default function Footer() {
               Home
             </Link>
             <Link
-              href="/#about"
+              href="/about"
               className="text-xs sm:text-sm text-neutral-400 hover:text-white transition"
             >
               About Us
@@ -55,7 +55,7 @@ export default function Footer() {
               Services
             </Link>
             <Link
-              href="/#contact"
+              href="/contact"
               className="text-xs sm:text-sm text-neutral-400 hover:text-white transition"
             >
               Contact Us
