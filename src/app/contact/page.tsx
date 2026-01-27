@@ -13,71 +13,16 @@ import {
   Linkedin,
   Twitter,
   CheckCircle,
+  LucideIcon,
 } from "lucide-react";
+import { contactMethods, offices, faqData } from "@/data/contact";
 
-const contactMethods = [
-  {
-    icon: Mail,
-    title: "Email Us",
-    description: "Our team typically responds within 24 hours",
-    value: "hello@chainveil.io",
-    link: "mailto:hello@chainveil.io",
-  },
-  {
-    icon: MessageSquare,
-    title: "Live Chat",
-    description: "Available Monday to Friday, 9am-6pm EST",
-    value: "Start a conversation",
-    link: "#",
-  },
-  {
-    icon: Phone,
-    title: "Call Us",
-    description: "For urgent enterprise inquiries",
-    value: "+1 (555) 123-4567",
-    link: "tel:+15551234567",
-  },
-];
-
-const offices = [
-  {
-    city: "San Francisco",
-    country: "United States",
-    address: "100 Market Street, Suite 300",
-    timezone: "PST (UTC-8)",
-  },
-  {
-    city: "Singapore",
-    country: "Singapore",
-    address: "1 Raffles Place, Tower 2",
-    timezone: "SGT (UTC+8)",
-  },
-  {
-    city: "London",
-    country: "United Kingdom",
-    address: "30 St Mary Axe",
-    timezone: "GMT (UTC+0)",
-  },
-];
-
-const faqData = [
-  {
-    question: "How quickly can I get started with ChainVeil?",
-    answer: "Most teams are up and running within 24 hours. Our streamlined onboarding process includes guided setup, documentation, and dedicated support to get you building fast.",
-  },
-  {
-    question: "What support options are available?",
-    answer: "We offer email support for all plans, with dedicated Slack channels and 24/7 phone support for enterprise clients. Our average response time is under 4 hours.",
-  },
-  {
-    question: "Do you offer custom enterprise solutions?",
-    answer: "Yes, we work with enterprise clients to build custom AI and blockchain solutions tailored to their specific needs. Contact our sales team to discuss your requirements.",
-  },
-  {
-    question: "What is your pricing model?",
-    answer: "We offer flexible pricing based on usage, with options for startups, growing teams, and enterprises. Contact us for a custom quote or visit our pricing page for more details.",
-  },
-];
+// Icon mapping
+const iconMap: Record<string, LucideIcon> = {
+  Mail,
+  MessageSquare,
+  Phone,
+};
 
 export default function ContactPage() {
   const [formState, setFormState] = useState({
@@ -116,7 +61,8 @@ export default function ContactPage() {
             </span>
           </h1>
           <p className="text-sm sm:text-base text-neutral-400 max-w-2xl mt-3 sm:mt-5 mx-auto px-2">
-            Whether you have a question about our services, need technical support, or want to explore a partnership, we&apos;re here to help.
+            Whether you have a question about our services, need technical
+            support, or want to explore a partnership, we&apos;re here to help.
           </p>
         </div>
       </section>
@@ -125,26 +71,31 @@ export default function ContactPage() {
       <section className="relative pt-12 sm:pt-16 pb-8 sm:pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
-            {contactMethods.map((method) => (
-              <a
-                key={method.title}
-                href={method.link}
-                className="group p-5 sm:p-6 rounded-xl sm:rounded-2xl border border-white/10 bg-neutral-900/40 ring-1 ring-white/5 hover:bg-white/5 hover:border-brand/20 transition-all duration-300 text-center"
-              >
-                <div className="inline-flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-xl bg-white/5 ring-1 ring-white/10 mb-4 group-hover:bg-brand/10 group-hover:ring-brand/20 transition-all">
-                  <method.icon className="h-5 w-5 sm:h-6 sm:w-6 text-brand" />
-                </div>
-                <h3 className="text-base sm:text-lg font-semibold text-neutral-100 mb-1">
-                  {method.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-neutral-400 mb-2">
-                  {method.description}
-                </p>
-                <span className="text-sm sm:text-base text-brand font-medium group-hover:underline">
-                  {method.value}
-                </span>
-              </a>
-            ))}
+            {contactMethods.map((method) => {
+              const IconComponent = iconMap[method.icon];
+              return (
+                <a
+                  key={method.title}
+                  href={method.link}
+                  className="group p-5 sm:p-6 rounded-xl sm:rounded-2xl border border-white/10 bg-neutral-900/40 ring-1 ring-white/5 hover:bg-white/5 hover:border-brand/20 transition-all duration-300 text-center"
+                >
+                  <div className="inline-flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-xl bg-white/5 ring-1 ring-white/10 mb-4 group-hover:bg-brand/10 group-hover:ring-brand/20 transition-all">
+                    {IconComponent && (
+                      <IconComponent className="h-5 w-5 sm:h-6 sm:w-6 text-brand" />
+                    )}
+                  </div>
+                  <h3 className="text-base sm:text-lg font-semibold text-neutral-100 mb-1">
+                    {method.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-neutral-400 mb-2">
+                    {method.description}
+                  </p>
+                  <span className="text-sm sm:text-base text-brand font-medium group-hover:underline">
+                    {method.value}
+                  </span>
+                </a>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -160,7 +111,8 @@ export default function ContactPage() {
                   Send us a message
                 </h2>
                 <p className="text-xs sm:text-sm text-neutral-400 mb-6">
-                  Fill out the form below and we&apos;ll get back to you as soon as possible.
+                  Fill out the form below and we&apos;ll get back to you as soon
+                  as possible.
                 </p>
 
                 {isSubmitted ? (
@@ -237,12 +189,24 @@ export default function ContactPage() {
                           }
                           className="w-full bg-white/5 border border-white/10 ring-1 ring-white/5 rounded-lg sm:rounded-xl px-3 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm text-white focus:outline-none focus:border-brand/50 focus:ring-brand/20 transition"
                         >
-                          <option value="" className="bg-neutral-900">Select a topic</option>
-                          <option value="general" className="bg-neutral-900">General Inquiry</option>
-                          <option value="sales" className="bg-neutral-900">Sales & Pricing</option>
-                          <option value="support" className="bg-neutral-900">Technical Support</option>
-                          <option value="partnership" className="bg-neutral-900">Partnership</option>
-                          <option value="enterprise" className="bg-neutral-900">Enterprise Solutions</option>
+                          <option value="" className="bg-neutral-900">
+                            Select a topic
+                          </option>
+                          <option value="general" className="bg-neutral-900">
+                            General Inquiry
+                          </option>
+                          <option value="sales" className="bg-neutral-900">
+                            Sales & Pricing
+                          </option>
+                          <option value="support" className="bg-neutral-900">
+                            Technical Support
+                          </option>
+                          <option value="partnership" className="bg-neutral-900">
+                            Partnership
+                          </option>
+                          <option value="enterprise" className="bg-neutral-900">
+                            Enterprise Solutions
+                          </option>
                         </select>
                       </div>
                     </div>
@@ -351,7 +315,14 @@ export default function ContactPage() {
                         strokeLinecap="round"
                         strokeLinejoin="round"
                       >
-                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                        <rect
+                          width="20"
+                          height="20"
+                          x="2"
+                          y="2"
+                          rx="5"
+                          ry="5"
+                        ></rect>
                         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                         <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
                       </svg>
@@ -373,8 +344,12 @@ export default function ContactPage() {
         <div className="max-w-4xl mx-auto pt-12 sm:pt-24 px-4 sm:px-6 pb-10 sm:pb-16">
           {/* Heading */}
           <div className="text-center mb-8 sm:mb-12 md:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-neutral-100">Contact & Support FAQ</h2>
-            <p className="mt-3 sm:mt-4 max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-neutral-400 leading-relaxed px-2">Common questions about getting started and working with ChainVeil.</p>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight text-neutral-100">
+              Contact & Support FAQ
+            </h2>
+            <p className="mt-3 sm:mt-4 max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-neutral-400 leading-relaxed px-2">
+              Common questions about getting started and working with ChainVeil.
+            </p>
           </div>
 
           {/* FAQ Accordion */}
@@ -390,7 +365,14 @@ export default function ContactPage() {
                       ? "border-brand/30 ring-1 ring-brand/10"
                       : "border-white/10 ring-1 ring-white/5 bg-neutral-900/40 hover:bg-white/5"
                   }`}
-                  style={isOpen ? { background: "linear-gradient(180deg, rgba(129, 214, 88, 0.12) 0%, rgba(129, 214, 88, 0.06) 50%, transparent 100%)" } : {}}
+                  style={
+                    isOpen
+                      ? {
+                          background:
+                            "linear-gradient(180deg, rgba(129, 214, 88, 0.12) 0%, rgba(129, 214, 88, 0.06) 50%, transparent 100%)",
+                        }
+                      : {}
+                  }
                 >
                   <button
                     type="button"
@@ -398,7 +380,9 @@ export default function ContactPage() {
                     onClick={() => toggleFaq(index)}
                     aria-expanded={isOpen}
                   >
-                    <span className="text-sm sm:text-lg md:text-xl font-semibold tracking-tight text-neutral-100">{item.question}</span>
+                    <span className="text-sm sm:text-lg md:text-xl font-semibold tracking-tight text-neutral-100">
+                      {item.question}
+                    </span>
                     <span className="inline-flex items-center justify-center rounded-full bg-white/10 ring-1 ring-white/10 text-white h-6 w-6 sm:h-8 sm:w-8 shrink-0 transition-transform duration-200">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -420,12 +404,14 @@ export default function ContactPage() {
                   <div
                     className="faq-panel transition-all duration-300 ease-in-out overflow-hidden"
                     style={{
-                      maxHeight: isOpen ? '200px' : '0',
-                      opacity: isOpen ? '1' : '0',
+                      maxHeight: isOpen ? "200px" : "0",
+                      opacity: isOpen ? "1" : "0",
                     }}
                   >
                     <div className="px-4 sm:px-6 md:px-8 pb-4 sm:pb-6 md:pb-8 pt-0">
-                      <p className="text-xs sm:text-sm md:text-base text-neutral-300 leading-relaxed">{item.answer}</p>
+                      <p className="text-xs sm:text-sm md:text-base text-neutral-300 leading-relaxed">
+                        {item.answer}
+                      </p>
                     </div>
                   </div>
                 </div>

@@ -11,70 +11,19 @@ import {
   Award,
   TrendingUp,
   Users,
+  LucideIcon,
 } from "lucide-react";
+import { stats, values, team, milestones, missionStats } from "@/data/about";
 
-const values = [
-  {
-    icon: Shield,
-    title: "Security First",
-    description:
-      "Every line of code we write prioritizes security. Our AI-powered auditing catches vulnerabilities before they become threats.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Innovation Driven",
-    description:
-      "We push the boundaries of what's possible by combining cutting-edge AI with blockchain technology.",
-  },
-  {
-    icon: Users,
-    title: "Community Focused",
-    description:
-      "We build for the community. Our solutions are designed to empower developers and users alike.",
-  },
-  {
-    icon: Zap,
-    title: "Performance Obsessed",
-    description:
-      "Speed and efficiency are non-negotiable. Our infrastructure is optimized for maximum throughput.",
-  },
-];
-
-const team = [
-  {
-    name: "Alex Chen",
-    role: "Founder & CEO",
-    bio: "10+ years in distributed systems and AI. Previously led blockchain and machine learning initiatives at a Fortune 500 tech company.",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face&auto=format",
-  },
-  {
-    name: "Sarah Martinez",
-    role: "CTO",
-    bio: "Core contributor to multiple Layer 2 protocols. PhD in Cryptography and AI from MIT.",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face&auto=format",
-  },
-  {
-    name: "James Wilson",
-    role: "Head of AI & Security",
-    bio: "Former security researcher specializing in AI-powered threat detection. Identified vulnerabilities in major DeFi protocols.",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face&auto=format",
-  },
-  {
-    name: "Emily Park",
-    role: "Lead Blockchain Engineer",
-    bio: "Solidity expert with 50+ audited smart contracts. Pioneer in integrating AI models with on-chain data.",
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face&auto=format",
-  },
-];
-
-const milestones = [
-  { year: "2021", title: "Founded", description: "ChainVeil was born with a mission to merge AI and blockchain." },
-  { year: "2022", title: "Seed Round", description: "Raised $5M to build our core AI infrastructure." },
-  { year: "2023", title: "Product Launch", description: "Launched our AI-powered smart contract auditing platform." },
-  { year: "2024", title: "Series A", description: "Secured $25M to expand cross-chain capabilities." },
-  { year: "2025", title: "Global Expansion", description: "Opened offices in Singapore, London, and Dubai." },
-  { year: "2026", title: "Industry Leader", description: "Now powering 500+ teams and $4.8B in secured TVL." },
-];
+const iconMap: Record<string, LucideIcon> = {
+  Shield,
+  Lightbulb,
+  Users,
+  Zap,
+  Globe,
+  Award,
+  TrendingUp,
+};
 
 export default function AboutPage() {
   return (
@@ -92,7 +41,9 @@ export default function AboutPage() {
             </span>
           </h1>
           <p className="text-sm sm:text-base text-neutral-400 max-w-2xl mt-3 sm:mt-5 mx-auto px-2">
-            We&apos;re a team of AI researchers, blockchain engineers, and security experts united by a single mission: making Web3 safer and smarter.
+            We&apos;re a team of AI researchers, blockchain engineers, and
+            security experts united by a single mission: making Web3 safer and
+            smarter.
           </p>
         </div>
       </section>
@@ -101,12 +52,7 @@ export default function AboutPage() {
       <section className="relative pt-12 sm:pt-16 pb-12 sm:pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-            {[
-              { label: "Team Members", value: "50+" },
-              { label: "Countries", value: "12" },
-              { label: "Projects Delivered", value: "500+" },
-              { label: "Client Satisfaction", value: "99%" },
-            ].map((stat) => (
+            {stats.map((stat) => (
               <div
                 key={stat.label}
                 className="text-center p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-white/10 bg-neutral-900/40 ring-1 ring-white/5"
@@ -136,10 +82,14 @@ export default function AboutPage() {
                 Democratizing AI-powered blockchain security
               </h2>
               <p className="text-sm sm:text-base text-neutral-400 leading-relaxed mb-4">
-                We believe that every blockchain project deserves enterprise-grade security, regardless of size or budget. Our AI-powered tools make advanced security accessible to everyone.
+                We believe that every blockchain project deserves enterprise-grade
+                security, regardless of size or budget. Our AI-powered tools make
+                advanced security accessible to everyone.
               </p>
               <p className="text-sm sm:text-base text-neutral-400 leading-relaxed">
-                By combining machine learning with deep blockchain expertise, we&apos;re creating a new standard for smart contract security and cross-chain infrastructure.
+                By combining machine learning with deep blockchain expertise,
+                we&apos;re creating a new standard for smart contract security and
+                cross-chain infrastructure.
               </p>
             </div>
             <div className="relative">
@@ -153,24 +103,24 @@ export default function AboutPage() {
                 }}
               >
                 <div className="grid grid-cols-2 gap-4">
-                  {[
-                    { icon: Globe, label: "Global Reach", value: "50+ Networks" },
-                    { icon: Award, label: "Audits Completed", value: "12,000+" },
-                    { icon: Shield, label: "Vulnerabilities Found", value: "45,000+" },
-                    { icon: TrendingUp, label: "TVL Protected", value: "$4.8B" },
-                  ].map((item) => (
-                    <div key={item.label} className="text-center p-3 sm:p-4">
-                      <div className="inline-flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-xl bg-white/5 ring-1 ring-white/10 mb-2 sm:mb-3">
-                        <item.icon className="h-5 w-5 sm:h-6 sm:w-6 text-brand" />
+                  {missionStats.map((item) => {
+                    const IconComponent = iconMap[item.icon];
+                    return (
+                      <div key={item.label} className="text-center p-3 sm:p-4">
+                        <div className="inline-flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-xl bg-white/5 ring-1 ring-white/10 mb-2 sm:mb-3">
+                          {IconComponent && (
+                            <IconComponent className="h-5 w-5 sm:h-6 sm:w-6 text-brand" />
+                          )}
+                        </div>
+                        <div className="text-lg sm:text-xl font-semibold text-neutral-100">
+                          {item.value}
+                        </div>
+                        <div className="text-[10px] sm:text-xs text-neutral-400">
+                          {item.label}
+                        </div>
                       </div>
-                      <div className="text-lg sm:text-xl font-semibold text-neutral-100">
-                        {item.value}
-                      </div>
-                      <div className="text-[10px] sm:text-xs text-neutral-400">
-                        {item.label}
-                      </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             </div>
@@ -191,22 +141,27 @@ export default function AboutPage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            {values.map((value) => (
-              <div
-                key={value.title}
-                className="group p-5 sm:p-6 rounded-xl sm:rounded-2xl border border-white/10 bg-neutral-900/40 ring-1 ring-white/5 hover:bg-white/5 hover:border-brand/20 transition-all duration-300"
-              >
-                <div className="inline-flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-xl bg-white/5 ring-1 ring-white/10 mb-4 group-hover:bg-brand/10 group-hover:ring-brand/20 transition-all">
-                  <value.icon className="h-5 w-5 sm:h-6 sm:w-6 text-brand" />
+            {values.map((value) => {
+              const IconComponent = iconMap[value.icon];
+              return (
+                <div
+                  key={value.title}
+                  className="group p-5 sm:p-6 rounded-xl sm:rounded-2xl border border-white/10 bg-neutral-900/40 ring-1 ring-white/5 hover:bg-white/5 hover:border-brand/20 transition-all duration-300"
+                >
+                  <div className="inline-flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-xl bg-white/5 ring-1 ring-white/10 mb-4 group-hover:bg-brand/10 group-hover:ring-brand/20 transition-all">
+                    {IconComponent && (
+                      <IconComponent className="h-5 w-5 sm:h-6 sm:w-6 text-brand" />
+                    )}
+                  </div>
+                  <h3 className="text-base sm:text-lg font-semibold text-neutral-100 mb-2">
+                    {value.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
+                    {value.description}
+                  </p>
                 </div>
-                <h3 className="text-base sm:text-lg font-semibold text-neutral-100 mb-2">
-                  {value.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
-                  {value.description}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -224,7 +179,6 @@ export default function AboutPage() {
           </div>
 
           <div className="relative">
-            {/* Timeline line */}
             <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-brand/50 via-brand/20 to-transparent sm:-translate-x-px" />
 
             <div className="space-y-8 sm:space-y-12">
@@ -235,11 +189,13 @@ export default function AboutPage() {
                     index % 2 === 0 ? "sm:flex-row" : "sm:flex-row-reverse"
                   }`}
                 >
-                  {/* Dot */}
                   <div className="absolute left-4 sm:left-1/2 h-3 w-3 rounded-full bg-brand ring-4 ring-neutral-950 sm:-translate-x-1.5" />
 
-                  {/* Content */}
-                  <div className={`flex-1 ml-10 sm:ml-0 ${index % 2 === 0 ? "sm:pr-12 sm:text-right" : "sm:pl-12"}`}>
+                  <div
+                    className={`flex-1 ml-10 sm:ml-0 ${
+                      index % 2 === 0 ? "sm:pr-12 sm:text-right" : "sm:pl-12"
+                    }`}
+                  >
                     <div className="p-4 sm:p-5 rounded-xl border border-white/10 bg-neutral-900/40 ring-1 ring-white/5">
                       <div className="text-brand font-semibold text-sm sm:text-base mb-1">
                         {milestone.year}
@@ -253,7 +209,6 @@ export default function AboutPage() {
                     </div>
                   </div>
 
-                  {/* Spacer for alternating layout */}
                   <div className="hidden sm:block flex-1" />
                 </div>
               ))}
@@ -262,7 +217,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Team Section - Matching Homepage Members Style */}
+      {/* Team Section */}
       <section className="relative py-12 sm:py-16 md:py-24" id="team">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10 sm:mb-16">
@@ -270,18 +225,17 @@ export default function AboutPage() {
               Meet Our Team
             </h2>
             <p className="mt-3 sm:mt-4 max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-neutral-400 leading-relaxed px-2">
-              AI and blockchain experts building the infrastructure for the decentralized future.
+              AI and blockchain experts building the infrastructure for the
+              decentralized future.
             </p>
           </div>
 
-          {/* Team Grid - Matching Homepage Members Component */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {team.map((member) => (
               <div
                 key={member.name}
                 className="group relative rounded-2xl sm:rounded-3xl border border-white/10 bg-neutral-900/40 ring-1 ring-white/5 p-5 sm:p-6 transition-all duration-300 hover:bg-white/5 hover:border-brand/20"
               >
-                {/* Avatar */}
                 <div className="flex justify-center mb-4 sm:mb-5">
                   <div className="h-16 w-16 sm:h-20 sm:w-20 rounded-full ring-2 ring-white/10 shadow-lg overflow-hidden">
                     <img
@@ -292,7 +246,6 @@ export default function AboutPage() {
                   </div>
                 </div>
 
-                {/* Info */}
                 <div className="text-center">
                   <h3 className="text-base sm:text-lg font-semibold text-neutral-100 tracking-tight">
                     {member.name}
@@ -305,9 +258,8 @@ export default function AboutPage() {
                   </p>
                 </div>
 
-                {/* Hover glow effect */}
                 <div className="absolute inset-0 rounded-2xl sm:rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div className="absolute inset-x-4 bottom-0 h-px bg-gradient-to-r from-transparent via-brand/50 to-transparent"></div>
+                  <div className="absolute inset-x-4 bottom-0 h-px bg-gradient-to-r from-transparent via-brand/50 to-transparent" />
                 </div>
               </div>
             ))}
@@ -331,7 +283,8 @@ export default function AboutPage() {
               Want to join our team?
             </h2>
             <p className="text-xs sm:text-sm md:text-base text-neutral-400 max-w-xl mx-auto mb-6 sm:mb-8">
-              We&apos;re always looking for talented individuals who are passionate about AI and blockchain technology.
+              We&apos;re always looking for talented individuals who are
+              passionate about AI and blockchain technology.
             </p>
             <a
               href="#"
@@ -340,10 +293,9 @@ export default function AboutPage() {
               View Open Positions
             </a>
 
-            {/* Bottom glow */}
             <div className="pointer-events-none absolute inset-x-4 sm:inset-x-6 md:inset-x-10 bottom-0">
-              <div className="h-px w-full rounded-full bg-gradient-to-r from-transparent via-brand to-transparent"></div>
-              <div className="absolute left-1/2 -translate-x-1/2 bottom-0 h-8 sm:h-10 md:h-12 w-[90%] sm:w-[88%] md:w-[82%] rounded-full bg-brand/25 blur-2xl"></div>
+              <div className="h-px w-full rounded-full bg-gradient-to-r from-transparent via-brand to-transparent" />
+              <div className="absolute left-1/2 -translate-x-1/2 bottom-0 h-8 sm:h-10 md:h-12 w-[90%] sm:w-[88%] md:w-[82%] rounded-full bg-brand/25 blur-2xl" />
             </div>
           </div>
         </div>
