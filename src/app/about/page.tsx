@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TeamCarousel from "@/components/TeamCarousel";
@@ -254,12 +255,12 @@ export default function AboutPage() {
               We&apos;re always looking for talented individuals who are
               passionate about AI and blockchain technology.
             </p>
-            <a
-              href="#"
+            <Link
+              href="/hiring"
               className="inline-flex items-center gap-2 font-semibold text-neutral-900 bg-brand hover:bg-brand-light rounded-full py-2.5 sm:py-3 px-5 sm:px-6 transition-all duration-300"
             >
               View Open Positions
-            </a>
+            </Link>
 
             <div className="pointer-events-none absolute inset-x-4 sm:inset-x-6 md:inset-x-10 bottom-0">
               <div className="h-px w-full rounded-full bg-gradient-to-r from-transparent via-brand to-transparent" />

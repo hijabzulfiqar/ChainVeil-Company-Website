@@ -70,6 +70,14 @@ export default function Header() {
                     Blog
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    href="/hiring"
+                    className="px-3 py-1.5 text-sm text-neutral-300 hover:text-white hover:bg-white/5 rounded-full transition"
+                  >
+                    Hiring
+                  </Link>
+                </li>
               </ul>
             </div>
           </nav>
@@ -128,6 +136,13 @@ export default function Header() {
                 className="px-4 py-3 text-sm text-neutral-300 hover:text-white hover:bg-white/5 rounded-xl transition"
               >
                 Blog
+              </Link>
+              <Link
+                href="/hiring"
+                onClick={() => setMobileMenuOpen(false)}
+                className="px-4 py-3 text-sm text-neutral-300 hover:text-white hover:bg-white/5 rounded-xl transition"
+              >
+                Hiring
               </Link>
             </nav>
           </div>
