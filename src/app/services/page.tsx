@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import {
@@ -159,13 +160,6 @@ export default function ServicesPage() {
                           {service.stats.value}
                         </div>
                       </div>
-                      <a
-                        href="#"
-                        className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-medium text-neutral-300 hover:text-white transition group/link"
-                      >
-                        Learn more
-                        <ArrowUpRight className="h-3.5 w-3.5 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
-                      </a>
                     </div>
                   </div>
                 </div>
@@ -256,13 +250,13 @@ export default function ServicesPage() {
               Get in touch with our team to discuss your project requirements
               and discover how ChainVeil can accelerate your development.
             </p>
-            <a
+            <Link
               href="/contact"
               className="inline-flex items-center gap-2 font-semibold text-neutral-900 bg-brand hover:bg-brand-light rounded-full py-2.5 sm:py-3 px-5 sm:px-6 transition-all duration-300"
             >
               Contact Our Team
               <ArrowUpRight className="h-4 w-4" />
-            </a>
+            </Link>
 
             {/* Bottom glow */}
             <div className="pointer-events-none absolute inset-x-6 sm:inset-x-10 bottom-0">

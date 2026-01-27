@@ -1,7 +1,5 @@
 "use client";
 
-import { ArrowUpRight } from "lucide-react";
-
 export default function Steps() {
   return (
     <section className="relative">
@@ -41,12 +39,6 @@ export default function Steps() {
               ))}
             </div>
 
-            <div className="mt-6 sm:mt-10 flex justify-center">
-              <a href="#" className="flex justify-center gap-2 items-center font-semibold relative z-10 overflow-hidden group text-sm sm:text-lg text-neutral-900 bg-gray-50 max-w-fit border-gray-50 border-2 rounded-full py-1.5 sm:py-2 px-3 sm:px-4 shadow-xl backdrop-blur-md hover:bg-brand hover:text-white hover:border-brand transition-all duration-300">
-                Start Building
-                <ArrowUpRight className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
-              </a>
-            </div>
           </div>
         </div>
       </div>

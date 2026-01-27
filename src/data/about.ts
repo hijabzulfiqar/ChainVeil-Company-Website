@@ -40,28 +40,48 @@ export const team = [
     role: "Founder & CEO",
     bio: "10+ years in distributed systems and AI. Previously led blockchain and machine learning initiatives at a Fortune 500 tech company.",
     avatar:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face&auto=format",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face&auto=format",
+    linkedin: "https://linkedin.com/in/alexchen",
   },
   {
     name: "Sarah Martinez",
     role: "CTO",
     bio: "Core contributor to multiple Layer 2 protocols. PhD in Cryptography and AI from MIT.",
     avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face&auto=format",
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face&auto=format",
+    linkedin: "https://linkedin.com/in/sarahmartinez",
   },
   {
     name: "James Wilson",
     role: "Head of AI & Security",
     bio: "Former security researcher specializing in AI-powered threat detection. Identified vulnerabilities in major DeFi protocols.",
     avatar:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face&auto=format",
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face&auto=format",
+    linkedin: "https://linkedin.com/in/jameswilson",
   },
   {
     name: "Emily Park",
     role: "Lead Blockchain Engineer",
     bio: "Solidity expert with 50+ audited smart contracts. Pioneer in integrating AI models with on-chain data.",
     avatar:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face&auto=format",
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face&auto=format",
+    linkedin: "https://linkedin.com/in/emilypark",
+  },
+  {
+    name: "David Kim",
+    role: "Head of Product",
+    bio: "Former product lead at leading crypto exchange. 8+ years building Web3 products used by millions of users worldwide.",
+    avatar:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face&auto=format",
+    linkedin: "https://linkedin.com/in/davidkim",
+  },
+  {
+    name: "Lisa Thompson",
+    role: "VP of Engineering",
+    bio: "Ex-Google engineer with expertise in distributed systems. Led teams building scalable infrastructure for Fortune 100 companies.",
+    avatar:
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop&crop=face&auto=format",
+    linkedin: "https://linkedin.com/in/lisathompson",
   },
 ];
 

@@ -2,6 +2,7 @@
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import TeamCarousel from "@/components/TeamCarousel";
 import {
   Target,
   Lightbulb,
@@ -230,40 +231,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            {team.map((member) => (
-              <div
-                key={member.name}
-                className="group relative rounded-2xl sm:rounded-3xl border border-white/10 bg-neutral-900/40 ring-1 ring-white/5 p-5 sm:p-6 transition-all duration-300 hover:bg-white/5 hover:border-brand/20"
-              >
-                <div className="flex justify-center mb-4 sm:mb-5">
-                  <div className="h-16 w-16 sm:h-20 sm:w-20 rounded-full ring-2 ring-white/10 shadow-lg overflow-hidden">
-                    <img
-                      src={member.avatar}
-                      alt={member.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-
-                <div className="text-center">
-                  <h3 className="text-base sm:text-lg font-semibold text-neutral-100 tracking-tight">
-                    {member.name}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-brand font-medium mt-1">
-                    {member.role}
-                  </p>
-                  <p className="text-xs sm:text-sm text-neutral-400 mt-3 leading-relaxed">
-                    {member.bio}
-                  </p>
-                </div>
-
-                <div className="absolute inset-0 rounded-2xl sm:rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div className="absolute inset-x-4 bottom-0 h-px bg-gradient-to-r from-transparent via-brand/50 to-transparent" />
-                </div>
-              </div>
-            ))}
-          </div>
+          <TeamCarousel team={team} />
         </div>
       </section>
 

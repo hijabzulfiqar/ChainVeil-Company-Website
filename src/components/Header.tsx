@@ -8,7 +8,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="relative">
+    <header className="sticky top-0 z-50 bg-neutral-950/80 backdrop-blur-lg border-b border-white/5">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 py-4 sm:py-6">
         <div className="flex items-center justify-between relative">
           {/* Logo! */}

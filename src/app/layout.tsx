@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import GoToTop from "@/components/GoToTop";
 import "./globals.css";
 
 const inter = Inter({
@@ -24,6 +25,7 @@ export default function RootLayout({
         className={`${inter.variable} font-sans antialiased text-white h-full`}
       >
         {children}
+        <GoToTop />
       </body>
     </html>
   );

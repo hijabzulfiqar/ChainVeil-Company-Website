@@ -1,6 +1,6 @@
 "use client";
 
-import { Star, ArrowRight } from "lucide-react";
+import { Star } from "lucide-react";
 
 export default function CTA() {
   return (
@@ -28,19 +28,6 @@ export default function CTA() {
                 Join thousands of developers building intelligent dApps on ChainVeil infrastructure. Deploy AI-powered smart contracts and experience the future of Web3.
               </p>
 
-              <div className="mt-5 sm:mt-8 flex justify-center lg:justify-start">
-                <button type="button" className="button">
-                  <div className="points_wrapper">
-                    {[...Array(10)].map((_, i) => (
-                      <i key={i} className="point"></i>
-                    ))}
-                  </div>
-                  <span className="inner">
-                    Get Started
-                    <ArrowRight className="icon" />
-                  </span>
-                </button>
-              </div>
             </div>
 
             {/* Right: Testimonial card */}

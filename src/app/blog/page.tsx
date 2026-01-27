@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ArrowRight, Clock, User, Tag } from "lucide-react";
@@ -68,10 +67,7 @@ export default function BlogPage() {
       {showFeatured && featuredPost && (
         <section className="relative pb-10 sm:pb-12 md:pb-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
-            <Link
-              href={`/blog/${featuredPost.slug}`}
-              className="group block rounded-xl sm:rounded-2xl md:rounded-3xl border border-white/10 bg-neutral-900/40 ring-1 ring-white/5 overflow-hidden transition-all duration-300 hover:bg-white/5 hover:border-brand/20"
-            >
+            <div className="group block rounded-xl sm:rounded-2xl md:rounded-3xl border border-white/10 bg-neutral-900/40 ring-1 ring-white/5 overflow-hidden">
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 {/* Image */}
                 <div className="relative h-40 sm:h-56 md:h-64 lg:h-full min-h-[200px] lg:min-h-[280px] overflow-hidden">
@@ -92,7 +88,7 @@ export default function BlogPage() {
                     <Tag className="h-2.5 w-2.5 sm:h-3 sm:w-3" />
                     {featuredPost.category}
                   </span>
-                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold tracking-tight text-neutral-100 mb-2 sm:mb-3 group-hover:text-brand transition-colors">
+                  <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold tracking-tight text-neutral-100 mb-2 sm:mb-3">
                     {featuredPost.title}
                   </h2>
                   <p className="text-xs sm:text-sm md:text-base text-neutral-400 leading-relaxed mb-3 sm:mb-4 md:mb-6 line-clamp-3 sm:line-clamp-none">
@@ -112,7 +108,7 @@ export default function BlogPage() {
                   </div>
                 </div>
               </div>
-            </Link>
+            </div>
           </div>
         </section>
       )}
@@ -123,10 +119,9 @@ export default function BlogPage() {
           {filteredPosts.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
               {filteredPosts.map((post) => (
-                <Link
+                <div
                   key={post.slug}
-                  href={`/blog/${post.slug}`}
-                  className="group flex flex-col rounded-xl sm:rounded-2xl md:rounded-3xl border border-white/10 bg-neutral-900/40 ring-1 ring-white/5 overflow-hidden transition-all duration-300 hover:bg-white/5 hover:border-brand/20"
+                  className="group flex flex-col rounded-xl sm:rounded-2xl md:rounded-3xl border border-white/10 bg-neutral-900/40 ring-1 ring-white/5 overflow-hidden"
                 >
                   {/* Image */}
                   <div className="relative h-36 sm:h-40 md:h-48 overflow-hidden">
@@ -144,7 +139,7 @@ export default function BlogPage() {
                       <Tag className="h-2.5 w-2.5 sm:h-3 sm:w-3" />
                       {post.category}
                     </span>
-                    <h3 className="text-sm sm:text-base md:text-lg font-semibold tracking-tight text-neutral-100 mb-1.5 sm:mb-2 group-hover:text-brand transition-colors line-clamp-2">
+                    <h3 className="text-sm sm:text-base md:text-lg font-semibold tracking-tight text-neutral-100 mb-1.5 sm:mb-2 line-clamp-2">
                       {post.title}
                     </h3>
                     <p className="text-[10px] sm:text-xs md:text-sm text-neutral-400 leading-relaxed mb-3 sm:mb-4 line-clamp-2">
@@ -163,11 +158,7 @@ export default function BlogPage() {
                     </div>
                   </div>
 
-                  {/* Hover glow */}
-                  <div className="absolute inset-0 rounded-xl sm:rounded-2xl md:rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                    <div className="absolute inset-x-4 bottom-0 h-px bg-gradient-to-r from-transparent via-brand/50 to-transparent"></div>
-                  </div>
-                </Link>
+                </div>
               ))}
             </div>
           ) : (
