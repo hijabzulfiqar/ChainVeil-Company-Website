@@ -31,7 +31,7 @@ export default function BlogPage() {
           </p>
           <h1 className="mt-2 sm:mt-3 text-3xl sm:text-5xl lg:text-6xl font-semibold tracking-tight">
             Insights on AI &
-            <span className="block bg-clip-text text-transparent bg-gradient-to-br from-neutral-50 to-neutral-300">
+            <span className="block pb-1.5 bg-clip-text text-transparent bg-gradient-to-br from-neutral-50 to-neutral-300">
               Blockchain Technology
             </span>
           </h1>
@@ -104,7 +104,9 @@ export default function BlogPage() {
                       <Clock className="h-3 w-3 sm:h-3.5 sm:w-3.5" />
                       {featuredPost.readTime}
                     </span>
-                    <span className="hidden sm:inline">{featuredPost.date}</span>
+                    <span className="hidden sm:inline">
+                      {featuredPost.date}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -157,7 +159,6 @@ export default function BlogPage() {
                       </span>
                     </div>
                   </div>
-
                 </div>
               ))}
             </div>

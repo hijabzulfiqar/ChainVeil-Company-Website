@@ -56,7 +56,7 @@ export default function ContactPage() {
           <p className="text-xs sm:text-sm text-neutral-400">Contact Us</p>
           <h1 className="mt-2 sm:mt-3 text-3xl sm:text-5xl lg:text-6xl font-semibold tracking-tight">
             Let&apos;s build something
-            <span className="block bg-clip-text text-transparent bg-gradient-to-br from-neutral-50 to-neutral-300">
+            <span className="block pb-1.5 bg-clip-text text-transparent bg-gradient-to-br from-neutral-50 to-neutral-300">
               Amazing Together
             </span>
           </h1>
@@ -128,7 +128,10 @@ export default function ContactPage() {
                     </p>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+                  <form
+                    onSubmit={handleSubmit}
+                    className="space-y-4 sm:space-y-5"
+                  >
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-xs sm:text-sm font-medium text-neutral-300 mb-1.5">
@@ -154,7 +157,10 @@ export default function ContactPage() {
                           required
                           value={formState.email}
                           onChange={(e) =>
-                            setFormState({ ...formState, email: e.target.value })
+                            setFormState({
+                              ...formState,
+                              email: e.target.value,
+                            })
                           }
                           className="w-full bg-white/5 border border-white/10 ring-1 ring-white/5 rounded-lg sm:rounded-xl px-3 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm text-white placeholder:text-neutral-500 focus:outline-none focus:border-brand/50 focus:ring-brand/20 transition"
                           placeholder="john@company.com"
@@ -171,7 +177,10 @@ export default function ContactPage() {
                           type="text"
                           value={formState.company}
                           onChange={(e) =>
-                            setFormState({ ...formState, company: e.target.value })
+                            setFormState({
+                              ...formState,
+                              company: e.target.value,
+                            })
                           }
                           className="w-full bg-white/5 border border-white/10 ring-1 ring-white/5 rounded-lg sm:rounded-xl px-3 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm text-white placeholder:text-neutral-500 focus:outline-none focus:border-brand/50 focus:ring-brand/20 transition"
                           placeholder="Your Company"
@@ -185,7 +194,10 @@ export default function ContactPage() {
                           required
                           value={formState.subject}
                           onChange={(e) =>
-                            setFormState({ ...formState, subject: e.target.value })
+                            setFormState({
+                              ...formState,
+                              subject: e.target.value,
+                            })
                           }
                           className="w-full bg-white/5 border border-white/10 ring-1 ring-white/5 rounded-lg sm:rounded-xl px-3 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm text-white focus:outline-none focus:border-brand/50 focus:ring-brand/20 transition"
                         >
@@ -201,7 +213,10 @@ export default function ContactPage() {
                           <option value="support" className="bg-neutral-900">
                             Technical Support
                           </option>
-                          <option value="partnership" className="bg-neutral-900">
+                          <option
+                            value="partnership"
+                            className="bg-neutral-900"
+                          >
                             Partnership
                           </option>
                           <option value="enterprise" className="bg-neutral-900">
@@ -220,7 +235,10 @@ export default function ContactPage() {
                         rows={4}
                         value={formState.message}
                         onChange={(e) =>
-                          setFormState({ ...formState, message: e.target.value })
+                          setFormState({
+                            ...formState,
+                            message: e.target.value,
+                          })
                         }
                         className="w-full bg-white/5 border border-white/10 ring-1 ring-white/5 rounded-lg sm:rounded-xl px-3 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm text-white placeholder:text-neutral-500 focus:outline-none focus:border-brand/50 focus:ring-brand/20 transition resize-none"
                         placeholder="Tell us about your project or question..."

@@ -37,7 +37,7 @@ export default function AboutPage() {
           <p className="text-xs sm:text-sm text-neutral-400">About ChainVeil</p>
           <h1 className="mt-2 sm:mt-3 text-3xl sm:text-5xl lg:text-6xl font-semibold tracking-tight">
             Building the future of
-            <span className="block bg-clip-text text-transparent bg-gradient-to-br from-neutral-50 to-neutral-300">
+            <span className="block pb-1.5 bg-clip-text text-transparent bg-gradient-to-br from-neutral-50 to-neutral-300">
               Intelligent Blockchain
             </span>
           </h1>
@@ -83,14 +83,14 @@ export default function AboutPage() {
                 Democratizing AI-powered blockchain security
               </h2>
               <p className="text-sm sm:text-base text-neutral-400 leading-relaxed mb-4">
-                We believe that every blockchain project deserves enterprise-grade
-                security, regardless of size or budget. Our AI-powered tools make
-                advanced security accessible to everyone.
+                We believe that every blockchain project deserves
+                enterprise-grade security, regardless of size or budget. Our
+                AI-powered tools make advanced security accessible to everyone.
               </p>
               <p className="text-sm sm:text-base text-neutral-400 leading-relaxed">
                 By combining machine learning with deep blockchain expertise,
-                we&apos;re creating a new standard for smart contract security and
-                cross-chain infrastructure.
+                we&apos;re creating a new standard for smart contract security
+                and cross-chain infrastructure.
               </p>
             </div>
             <div className="relative">
