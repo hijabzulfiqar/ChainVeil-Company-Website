@@ -9,6 +9,7 @@ import {
   Zap,
   Hexagon,
 } from "lucide-react";
+import { featuresCardsData } from "@/data/home";
 
 export default function FeaturesCards() {
   return (
@@ -16,11 +17,11 @@ export default function FeaturesCards() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-16 sm:pt-24 pb-12 sm:pb-16">
         <div className="text-center mb-10 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] font-semibold tracking-tight">
-            <span className="text-neutral-200">Powering the next generation of</span>
-            <span className="block text-neutral-100">AI & blockchain infrastructure</span>
+            <span className="text-neutral-200">{featuresCardsData.heading.line1}</span>
+            <span className="block text-neutral-100">{featuresCardsData.heading.line2}</span>
           </h2>
           <p className="mt-3 sm:mt-4 max-w-3xl mx-auto text-sm sm:text-base md:text-lg text-neutral-400 leading-relaxed px-2">
-            Enterprise-grade AI and distributed ledger solutions built on cutting-edge machine learning and cryptographic protocols, setting a new standard for intelligent decentralized applications.
+            {featuresCardsData.description}
           </p>
         </div>
 
@@ -62,10 +63,7 @@ export default function FeaturesCards() {
               </div>
 
               <div className="space-y-2 sm:space-y-3">
-                {[
-                  { name: "0x8f3...a2b", role: "Token Bridge", amount: "+2.45 ETH", time: "2 blocks ago", positive: true },
-                  { name: "0x4c1...f8e", role: "Swap Execute", amount: "+0.85 ETH", time: "5 blocks ago", positive: true },
-                ].map((item) => (
+                {featuresCardsData.transactions.map((item) => (
                   <div key={item.name} className="flex items-center justify-between p-2.5 sm:p-3 rounded-lg sm:rounded-xl bg-white/5 border border-white/10 transition-all duration-300 hover:bg-white/10 hover:border-white/20">
                     <div className="flex items-center gap-2 sm:gap-3">
                       <div className="relative">

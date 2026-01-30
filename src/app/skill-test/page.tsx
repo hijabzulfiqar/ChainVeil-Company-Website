@@ -14,42 +14,13 @@ import {
   GitBranch,
   Send,
 } from "lucide-react";
-
-const testSteps = [
-  {
-    step: 1,
-    title: "Download the Test Project",
-    description:
-      "Click the download button below to get the starter project. The zip file contains all the necessary files and instructions.",
-  },
-  {
-    step: 2,
-    title: "Complete the Tasks",
-    description:
-      "Follow the instructions in the README.md file. You'll have a set of tasks to complete that demonstrate your skills.",
-  },
-  {
-    step: 3,
-    title: "Submit Your Solution",
-    description:
-      "Push your solution to a GitHub repository and include the link in your job application.",
-  },
-];
-
-const requirements = [
-  "Node.js 18+ installed on your machine",
-  "Git for version control",
-  "A code editor (VS Code recommended)",
-  "GitHub account for submission",
-];
-
-const tips = [
-  "Read all instructions carefully before starting",
-  "Focus on code quality over quantity",
-  "Write clean, well-documented code",
-  "Include a README with setup instructions",
-  "Test your solution before submitting",
-];
+import {
+  skillTestData,
+  testSteps,
+  requirements,
+  tips,
+  submissionSteps,
+} from "@/data/skillTest";
 
 export default function SkillTestPage() {
   const handleDownload = () => {
@@ -75,15 +46,13 @@ export default function SkillTestPage() {
             Back to Careers
           </Link>
           <h1 className="mt-2 sm:mt-3 text-3xl sm:text-5xl lg:text-6xl font-semibold tracking-tight">
-            Skill Test
+            {skillTestData.hero.title}
             <span className="block pb-1.5 bg-clip-text text-transparent bg-gradient-to-br from-neutral-50 to-neutral-300">
-              Show Us What You Can Do
+              {skillTestData.hero.subtitle}
             </span>
           </h1>
           <p className="text-sm sm:text-base text-neutral-400 max-w-2xl mt-3 sm:mt-5 mx-auto px-2">
-            Complete our technical assessment to demonstrate your coding
-            abilities. This test is designed to evaluate your problem-solving
-            skills and code quality.
+            {skillTestData.hero.description}
           </p>
         </div>
       </section>
@@ -95,7 +64,7 @@ export default function SkillTestPage() {
           <div className="flex items-center justify-center gap-2 mb-8 sm:mb-12">
             <div className="inline-flex items-center gap-2 text-sm sm:text-base text-neutral-300 bg-white/5 border border-white/10 ring-1 ring-white/5 rounded-full px-4 sm:px-5 py-2 sm:py-2.5">
               <Clock className="h-4 w-4 sm:h-5 sm:w-5 text-brand" />
-              Estimated Time: 2-4 hours
+              Estimated Time: {skillTestData.hero.estimatedTime}
             </div>
           </div>
 
@@ -113,18 +82,17 @@ export default function SkillTestPage() {
               <FileCode className="h-7 w-7 sm:h-8 sm:w-8" />
             </div>
             <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold tracking-tight text-neutral-100 mb-3 sm:mb-4">
-              Download Test Project
+              {skillTestData.download.title}
             </h2>
             <p className="text-sm sm:text-base text-neutral-400 max-w-lg mx-auto mb-6 sm:mb-8">
-              Get started by downloading the test project. It includes all the
-              files you need and detailed instructions.
+              {skillTestData.download.description}
             </p>
             <button
               onClick={handleDownload}
               className="inline-flex items-center justify-center gap-2 text-sm sm:text-base font-semibold text-neutral-900 bg-brand hover:bg-brand-light rounded-full py-3 px-6 sm:px-8 transition-all duration-300"
             >
               <Download className="h-4 w-4 sm:h-5 sm:w-5" />
-              Download Project (ZIP)
+              {skillTestData.download.buttonText}
             </button>
 
             {/* Bottom glow */}
@@ -231,20 +199,13 @@ export default function SkillTestPage() {
                   How to Submit
                 </h3>
                 <ol className="space-y-2 sm:space-y-3 text-xs sm:text-sm text-neutral-400 list-decimal list-inside">
-                  <li>
-                    Create a new GitHub repository for your solution
-                  </li>
-                  <li>
-                    Push your completed code to the repository
-                  </li>
-                  <li>
-                    Make sure the repository is public or invite{" "}
-                    <span className="text-brand">@chainveil-hiring</span> as a
-                    collaborator
-                  </li>
-                  <li>
-                    Include the repository link when applying for a position
-                  </li>
+                  {submissionSteps.map((step, index) => (
+                    <li key={index} dangerouslySetInnerHTML={{
+                      __html: step.includes('@chainveil-hiring')
+                        ? step.replace('@chainveil-hiring', '<span class="text-brand">@chainveil-hiring</span>')
+                        : step
+                    }} />
+                  ))}
                 </ol>
                 <div className="mt-4 sm:mt-6">
                   <Link

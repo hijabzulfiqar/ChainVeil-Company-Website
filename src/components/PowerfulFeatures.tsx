@@ -7,7 +7,19 @@ import {
   ReceiptText,
   Gauge,
   Shield,
+  LucideIcon,
 } from "lucide-react";
+import { powerfulFeatures } from "@/data/home";
+
+// Icon mapping
+const iconMap: Record<string, LucideIcon> = {
+  Send,
+  LineChart,
+  Bell,
+  ReceiptText,
+  Gauge,
+  Shield,
+};
 
 export default function PowerfulFeatures() {
   return (
@@ -24,18 +36,13 @@ export default function PowerfulFeatures() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-          {[
-            { icon: Send, title: "AI-powered bridges", description: "Transfer assets with AI-optimized routing across blockchains for lowest fees and fastest finality." },
-            { icon: LineChart, title: "Predictive gas analysis", description: "Machine learning models predict optimal gas prices and transaction timing for maximum efficiency." },
-            { icon: Bell, title: "AI threat detection", description: "Real-time AI monitoring for contract vulnerabilities, suspicious activity, and network anomalies." },
-            { icon: ReceiptText, title: "ML contract audit", description: "Deep learning security scanning that catches vulnerabilities traditional audits miss." },
-            { icon: Gauge, title: "Smart infrastructure", description: "AI-managed node infrastructure that auto-scales based on predictive demand analysis." },
-            { icon: Shield, title: "Intelligent security", description: "AI-enhanced wallet protection with behavioral analysis and fraud prevention." },
-          ].map((feature) => (
+          {powerfulFeatures.map((feature) => {
+            const IconComponent = iconMap[feature.icon];
+            return (
             <div key={feature.title} className="rounded-xl sm:rounded-2xl border border-white/5 bg-neutral-900/40 p-4 sm:p-6 md:p-7 transition hover:bg-white/5">
               <div className="flex items-start gap-3 sm:gap-4">
                 <div className="inline-flex bg-neutral-800/60 w-9 h-9 sm:w-10 sm:h-10 ring-white/10 ring-1 rounded-lg sm:rounded-xl items-center justify-center shrink-0">
-                  <feature.icon className="h-4 w-4 sm:h-5 sm:w-5 text-neutral-300" />
+                  {IconComponent && <IconComponent className="h-4 w-4 sm:h-5 sm:w-5 text-neutral-300" />}
                 </div>
                 <div>
                   <h3 className="text-sm sm:text-base md:text-lg font-semibold text-neutral-100 tracking-tight">{feature.title}</h3>
@@ -43,7 +50,8 @@ export default function PowerfulFeatures() {
                 </div>
               </div>
             </div>
-          ))}
+          );
+          })}
         </div>
       </div>
     </section>

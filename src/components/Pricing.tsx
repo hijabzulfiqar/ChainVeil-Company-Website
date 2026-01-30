@@ -1,6 +1,7 @@
 "use client";
 
 import { Check, ArrowUpRight, Sparkles } from "lucide-react";
+import { pricingData } from "@/data/home";
 
 export default function Pricing() {
   return (
@@ -8,8 +9,8 @@ export default function Pricing() {
       <div className="max-w-7xl mx-auto pt-24 pb-16 px-6">
         {/* Heading */}
         <div className="text-center mb-14">
-          <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight text-neutral-100">Simple and transparent pricing</h2>
-          <p className="mt-4 max-w-3xl mx-auto text-base sm:text-lg text-neutral-400 leading-relaxed">Choose the plan that fits your investments.</p>
+          <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight text-neutral-100">{pricingData.heading}</h2>
+          <p className="mt-4 max-w-3xl mx-auto text-base sm:text-lg text-neutral-400 leading-relaxed">{pricingData.description}</p>
         </div>
 
         {/* Cards */}

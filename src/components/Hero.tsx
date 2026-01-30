@@ -1,12 +1,14 @@
 "use client";
 
+import { heroData } from "@/data/home";
+
 export default function Hero() {
   return (
     <section className="relative min-h-[500px] sm:min-h-[550px] md:min-h-[600px] lg:min-h-[650px] flex items-center">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=2834&auto=format&fit=crop"
+          src={heroData.backgroundImage}
           alt="Blockchain AI Background"
           className="w-full h-full object-cover"
         />
@@ -21,22 +23,20 @@ export default function Hero() {
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 pt-4 sm:pt-6 pb-16 sm:pb-20 md:pb-24 w-full text-center">
         {/* Badge */}
         <p className="text-xs sm:text-sm text-neutral-400 mb-4 sm:mb-6">
-          Enterprise-grade AI & Blockchain infrastructure
+          {heroData.badge}
         </p>
 
         {/* Heading */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight leading-[1.1] mb-4 sm:mb-6">
-          <span className="text-neutral-100">Building the future with</span>
+          <span className="text-neutral-100">{heroData.heading.line1}</span>
           <span className="block bg-clip-text text-transparent pb-1.5 bg-gradient-to-br from-neutral-50 to-neutral-300">
-            AI & Blockchain Technology
+            {heroData.heading.line2}
           </span>
         </h1>
 
         {/* Description */}
         <p className="text-sm sm:text-base md:text-lg text-neutral-300 max-w-2xl mx-auto leading-relaxed">
-          Harness the power of artificial intelligence and distributed ledger
-          technology. ChainVeil delivers AI-powered smart contract audits,
-          intelligent DeFi analytics, and enterprise blockchain solutions.
+          {heroData.description}
         </p>
       </div>
 
